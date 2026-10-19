@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.org/agentops/1/HandoffMessage.schema.json",
+  "title": "HandoffMessage",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "AGENTOPS/1"
+    },
+    "kind": {
+      "const": "HandoffMessage"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:message:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "record_revision": {
+      "const": 1
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:project:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:task:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "task_revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000000
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:event:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:task:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "causation_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^urn:agentops:[a-z0-9-]+:event:[A-Za-z0-9._-]+$",
+          "maxLength": 240
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/handoff_type"
+    },
+    "source": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/party"
+    },
+    "target": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/party"
+    },
+    "resource": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/resource"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "requested_action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "resolution_condition": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/evidence_ref"
+      },
+      "minItems": 0,
+      "uniqueItems": true,
+      "maxItems": 1000
+    },
+    "legacy": {
+      "anyOf": [
+        {
+          "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/legacy"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "record_revision",
+    "project_id",
+    "created_at",
+    "task_id",
+    "task_revision",
+    "event_id",
+    "correlation_id",
+    "causation_id",
+    "type",
+    "source",
+    "target",
+    "resource",
+    "summary",
+    "requested_action",
+    "resolution_condition",
+    "evidence_refs",
+    "legacy"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "RecoveryAction",
+  "id": "urn:agentops:example-project:recovery:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "action": "RECONCILE",
+  "preconditions": [
+    "Read same outbox marker before any resend"
+  ],
+  "authorization_id": null,
+  "max_attempts": 1,
+  "status": "PROPOSED",
+  "evidence_refs": [],
+  "forbidden_effects": [
+    "No blind resend or history deletion"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "ProjectConfig",
+  "id": "urn:agentops:example-project:config:1",
+  "project_id": "urn:agentops:example-project:project:1",
+  "status": "DRAFT",
+  "execution_enabled": false,
+  "transport": "MANUAL_ONESHOT",
+  "repositories": [],
+  "owner_ids": [
+    "urn:agentops:example-project:human:1",
+    "urn:agentops:example-project:human:2"
+  ],
+  "team_roles": {
+    "executor_team_id": "urn:agentops:example-project:team:1",
+    "reviewer_team_id": "urn:agentops:example-project:team:2"
+  },
+  "executors": [
+    {
+      "executor_id": "urn:agentops:example-project:executor:1",
+      "enabled": false,
+      "mode": "DETERMINISTIC",
+      "provider": null,
+      "network": "DENIED",
+      "subagents_enabled": false
+    }
+  ],
+  "credential_refs": {
+    "reader": null,
+    "publisher": null
+  },
+  "policy": {
+    "profile": "read-only-review",
+    "allowed_actions": [
+      "analyze_read_only"
+    ],
+    "external_effects_enabled": false,
+    "budget": {
+      "max_attempts": 2,
+      "wall_seconds": 600,
+      "max_tokens": 0,
+      "max_cost_minor": 0,
+      "currency": "USD",
+      "max_external_effects": 1,
+      "max_hops": 4,
+      "max_no_progress_exchanges": 2
+    },
+    "deadline_seconds": 1200,
+    "lease_seconds": 60,
+    "heartbeat_seconds": 15,
+    "max_read_api_attempts": 3
+  },
+  "retention_days": {
+    "synthetic_evidence": 14,
+    "audit_and_dedupe": 90
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "HandoffMessage",
+  "id": "urn:agentops:example-project:message:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "task_revision": 1,
+  "event_id": "urn:agentops:example-project:event:1",
+  "correlation_id": "urn:agentops:example-project:task:1",
+  "causation_id": null,
+  "type": "REVIEW_REQUIRED",
+  "source": {
+    "agent_id": "urn:agentops:example-project:agent:1",
+    "team_id": "urn:agentops:example-project:team:1",
+    "owner_id": "urn:agentops:example-project:human:1"
+  },
+  "target": {
+    "agent_id": "urn:agentops:example-project:agent:2",
+    "team_id": "urn:agentops:example-project:team:2",
+    "owner_id": "urn:agentops:example-project:human:2"
+  },
+  "resource": {
+    "resource_id": "urn:agentops:example-project:resource:1",
+    "repository_ref": "https://example.invalid/repo/demo",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "revision_status": "PINNED",
+    "paths": [
+      "README.md"
+    ]
+  },
+  "summary": "Synthetic review",
+  "requested_action": "Read only analysis",
+  "resolution_condition": "Second team accepts same SHA",
+  "evidence_refs": [],
+  "legacy": null
+}

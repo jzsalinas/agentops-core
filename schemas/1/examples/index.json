@@ -1,0 +1,202 @@
+[
+  {
+    "path": "examples/valid/AgentIdentity.json",
+    "schema": "AgentIdentity.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/AgentIdentity.json",
+    "schema": "AgentIdentity.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/TeamIdentity.json",
+    "schema": "TeamIdentity.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/TeamIdentity.json",
+    "schema": "TeamIdentity.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/Task.json",
+    "schema": "Task.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/Task.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/TaskAssignment.json",
+    "schema": "TaskAssignment.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/TaskAssignment.json",
+    "schema": "TaskAssignment.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/Event.json",
+    "schema": "Event.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/Event.json",
+    "schema": "Event.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/HandoffMessage.json",
+    "schema": "HandoffMessage.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/HandoffMessage.json",
+    "schema": "HandoffMessage.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/Execution.json",
+    "schema": "Execution.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/Execution.json",
+    "schema": "Execution.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/ExecutionAttempt.json",
+    "schema": "ExecutionAttempt.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/ExecutionAttempt.json",
+    "schema": "ExecutionAttempt.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/Authorization.json",
+    "schema": "Authorization.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/Authorization.json",
+    "schema": "Authorization.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/ApprovalRequest.json",
+    "schema": "ApprovalRequest.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/ApprovalRequest.json",
+    "schema": "ApprovalRequest.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/EvidenceBundle.json",
+    "schema": "EvidenceBundle.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/EvidenceBundle.json",
+    "schema": "EvidenceBundle.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/ExecutionResult.json",
+    "schema": "ExecutionResult.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/ExecutionResult.json",
+    "schema": "ExecutionResult.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/Incident.json",
+    "schema": "Incident.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/Incident.json",
+    "schema": "Incident.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/valid/RecoveryAction.json",
+    "schema": "RecoveryAction.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/RecoveryAction.json",
+    "schema": "RecoveryAction.schema.json",
+    "valid": false,
+    "reason": "Missing required contract-specific field"
+  },
+  {
+    "path": "examples/invalid/bad-date.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "bad-date"
+  },
+  {
+    "path": "examples/invalid/unknown-state.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "unknown-state"
+  },
+  {
+    "path": "examples/invalid/secret-field.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "secret-field"
+  },
+  {
+    "path": "examples/invalid/unpinned-sha.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "unpinned-sha"
+  },
+  {
+    "path": "examples/invalid/unbounded-budget.json",
+    "schema": "Task.schema.json",
+    "valid": false,
+    "reason": "unbounded-budget"
+  },
+  {
+    "path": "examples/valid/ProjectConfig.json",
+    "schema": "ProjectConfig.schema.json",
+    "valid": true
+  },
+  {
+    "path": "examples/invalid/ProjectConfig.json",
+    "schema": "ProjectConfig.schema.json",
+    "valid": false,
+    "reason": "Inactive template cannot grant execution"
+  },
+  {
+    "path": "examples/valid/HandoffMessage.Example.json",
+    "schema": "HandoffMessage.schema.json",
+    "valid": true
+  }
+]

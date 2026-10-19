@@ -1,0 +1,75 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "HandoffMessage",
+  "id": "urn:agentops:example-project:message:cead2fd6ead546a3600333cd5e3c72d285f360566659bdb22d161ad989f4dea6",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "task_id": "urn:agentops:example-project:task:46b9de7c4b02f3cedb0acd2fefb8bc0540145bf0433e5e6810d23bac37553928",
+  "task_revision": 1,
+  "event_id": "urn:agentops:example-project:event:cead2fd6ead546a3600333cd5e3c72d285f360566659bdb22d161ad989f4dea6",
+  "correlation_id": "urn:agentops:example-project:task:46b9de7c4b02f3cedb0acd2fefb8bc0540145bf0433e5e6810d23bac37553928",
+  "causation_id": null,
+  "type": "REVIEW_REQUIRED",
+  "source": {
+    "agent_id": "urn:agentops:example-project:agent:2",
+    "team_id": "urn:agentops:example-project:team:2",
+    "owner_id": "urn:agentops:example-project:human:2"
+  },
+  "target": {
+    "agent_id": "urn:agentops:example-project:agent:1",
+    "team_id": "urn:agentops:example-project:team:1",
+    "owner_id": "urn:agentops:example-project:human:1"
+  },
+  "resource": {
+    "resource_id": "urn:agentops:example-project:resource:1",
+    "repository_ref": "https://example.invalid/repo/demo",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "revision_status": "PINNED",
+    "paths": [
+      "README.md"
+    ]
+  },
+  "summary": "Review synthetic README",
+  "requested_action": "Inspect supplied text without executing it",
+  "resolution_condition": "Owner B accepts evidence for the same SHA",
+  "evidence_refs": [],
+  "legacy": {
+    "protocol": "EXAMPLE-HANDOFF/1",
+    "request_id": "example-request-001",
+    "message_id": "example-request-001-r1-review-required",
+    "revision": 1,
+    "in_reply_to": null,
+    "declared_task": "https://example.invalid/synthetic/pull/1",
+    "source_url": "https://example.invalid/comments/1",
+    "source_object_id": "1",
+    "source_updated_at": "2025-01-01T12:00:00Z",
+    "observed_at": "2025-01-01T12:00:00Z",
+    "body_digest": "sha256:35029e878cffbec1b322a5bfee7183771f45f232e71ab9e1a74cb1475aad04e8",
+    "snapshot_ref": "urn:synthetic:snapshot:1",
+    "parser_version": "example-handoff-fixture/0.1",
+    "losses": [
+      "Declared evidence not independently resolved; no execution or authority inferred"
+    ],
+    "declared_from": {
+      "agent": "analyst-a",
+      "human": "owner-a",
+      "github": "example-principal-a"
+    },
+    "declared_to": {
+      "agent": "analyst-b",
+      "human": "owner-b",
+      "github": "synthetic-b"
+    },
+    "declared_context": {
+      "repository": "synthetic/repo",
+      "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "declared_evidence": [
+      {
+        "kind": "synthetic",
+        "uri": "urn:synthetic:evidence:1"
+      }
+    ]
+  }
+}

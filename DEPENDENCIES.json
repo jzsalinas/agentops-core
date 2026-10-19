@@ -1,0 +1,71 @@
+{
+  "format": "agentops-dependency-review/1",
+  "code_bundled": false,
+  "optional_format_extras_required": false,
+  "scope": "Declared Python distributions only; external native/interpreter components are not redistributed.",
+  "dependencies": [
+    {
+      "name": "jsonschema",
+      "version": "4.19.2",
+      "spdx_license": "MIT",
+      "relationship": "direct",
+      "source": "https://pypi.org/project/jsonschema/4.19.2/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "spdx_license": "MIT",
+      "relationship": "direct",
+      "source": "https://pypi.org/project/referencing/0.36.2/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "spdx_license": "MIT",
+      "relationship": "direct",
+      "source": "https://pypi.org/project/PyYAML/6.0.3/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "attrs",
+      "version": "25.4.0",
+      "spdx_license": "MIT",
+      "relationship": "transitive",
+      "source": "https://pypi.org/project/attrs/25.4.0/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2023.12.1",
+      "spdx_license": "MIT",
+      "relationship": "transitive",
+      "source": "https://pypi.org/project/jsonschema-specifications/2023.12.1/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.27.1",
+      "spdx_license": "MIT",
+      "relationship": "transitive",
+      "source": "https://pypi.org/project/rpds-py/0.27.1/",
+      "condition": "always",
+      "vendored": false
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "spdx_license": "PSF-2.0",
+      "relationship": "conditional-transitive",
+      "source": "https://pypi.org/project/typing-extensions/4.15.0/",
+      "condition": "python_version < '3.13'",
+      "vendored": false
+    }
+  ]
+}

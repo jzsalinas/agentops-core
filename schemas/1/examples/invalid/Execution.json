@@ -1,0 +1,38 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "Execution",
+  "id": "urn:agentops:example-project:execution:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "task_revision": 1,
+  "assignment_id": "urn:agentops:example-project:assignment:1",
+  "parent_execution_id": null,
+  "executor_id": "urn:agentops:example-project:executor:1",
+  "authorization_id": "urn:agentops:example-project:authorization:1",
+  "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "resource": {
+    "resource_id": "urn:agentops:example-project:resource:1",
+    "repository_ref": "https://example.invalid/repo/demo",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "revision_status": "PINNED",
+    "paths": [
+      "README.md"
+    ]
+  },
+  "status": "SUCCEEDED",
+  "attempt_ids": [
+    "urn:agentops:example-project:attempt:1"
+  ],
+  "budget": {
+    "max_attempts": 2,
+    "wall_seconds": 600,
+    "max_tokens": 0,
+    "max_cost_minor": 0,
+    "currency": "USD",
+    "max_external_effects": 1,
+    "max_hops": 4,
+    "max_no_progress_exchanges": 2
+  },
+  "cancel_requested": false
+}

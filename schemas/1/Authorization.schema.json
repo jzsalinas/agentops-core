@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.org/agentops/1/Authorization.schema.json",
+  "title": "Authorization",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "AGENTOPS/1"
+    },
+    "kind": {
+      "const": "Authorization"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:authorization:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "record_revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000000
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:project:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "approval_request_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^urn:agentops:[a-z0-9-]+:approval:[A-Za-z0-9._-]+$",
+          "maxLength": 240
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "issuer_principal": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/principal"
+    },
+    "grantee_agent_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:agent:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "decision_source": {
+      "enum": [
+        "HUMAN_APPROVAL",
+        "LOCAL_POLICY"
+      ]
+    },
+    "policy_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "scope": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/scope"
+    },
+    "valid_from": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "max_uses": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "used_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "status": {
+      "enum": [
+        "GRANTED",
+        "CONSUMED",
+        "EXPIRED",
+        "REVOKED"
+      ]
+    },
+    "decision_evidence_ref": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2048
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "record_revision",
+    "project_id",
+    "created_at",
+    "approval_request_id",
+    "issuer_principal",
+    "grantee_agent_id",
+    "decision_source",
+    "policy_digest",
+    "scope",
+    "valid_from",
+    "expires_at",
+    "max_uses",
+    "used_count",
+    "status",
+    "decision_evidence_ref"
+  ],
+  "additionalProperties": false
+}

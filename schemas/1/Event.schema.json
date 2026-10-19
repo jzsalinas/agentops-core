@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.org/agentops/1/Event.schema.json",
+  "title": "Event",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "AGENTOPS/1"
+    },
+    "kind": {
+      "const": "Event"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:event:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "record_revision": {
+      "const": 1
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:project:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:task:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "causation_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^urn:agentops:[a-z0-9-]+:event:[A-Za-z0-9._-]+$",
+          "maxLength": 240
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/party"
+    },
+    "target": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/party"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "payload_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "payload_ref": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2048
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "delivery_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "source_ref": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048
+        },
+        "source_object_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "source_revision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "authenticated_principal": {
+          "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/principal"
+        },
+        "verification": {
+          "enum": [
+            "VERIFIED_TRANSPORT",
+            "LOCAL_SYNTHETIC"
+          ]
+        }
+      },
+      "required": [
+        "adapter",
+        "delivery_id",
+        "source_ref",
+        "source_object_id",
+        "source_revision",
+        "authenticated_principal",
+        "verification"
+      ],
+      "additionalProperties": false
+    },
+    "hop_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 6
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "record_revision",
+    "project_id",
+    "created_at",
+    "event_type",
+    "correlation_id",
+    "causation_id",
+    "source",
+    "target",
+    "occurred_at",
+    "payload_digest",
+    "payload_ref",
+    "delivery",
+    "hop_count"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SUBJECT_TO_RELEASE_GATES",
+  "scope": "Exact public file payload, hidden entries and structured strings; maintainer-controlled private denylist applied separately. Git metadata is reviewed separately before publication.",
+  "findings": [],
+  "copyright_notice": "Maintainer-approved notice appears only in LICENSE.",
+  "governance": "Independent project, administered by the maintainer; contributions do not grant approval or administrative authority.",
+  "external_dependencies": "Declared, unbundled; distribution license metadata reviewed; no copied third-party code or media.",
+  "private_evidence_included": false,
+  "active_workflows_included": false,
+  "credentials_included": false,
+  "limitations": [
+    "Pattern matching and manual review are bounded, not proof against every possible identifying encoding.",
+    "Dependency review covers declared Python distributions, not every upstream native component.",
+    "Public destination, final content and commit metadata still require explicit maintainer approval."
+  ],
+  "method": [
+    "Explicit file allowlist and checksums",
+    "UTF-8 text, JSON value and Python literal inspection",
+    "Unicode normalization and private-pattern review",
+    "Host paths, credentials, contacts and domain checks",
+    "No source history, dependencies, media or historical records packaged",
+    "Git index and commit payload must match the exact reviewed public inventory"
+  ],
+  "inherited_history_included": false
+}

@@ -1,0 +1,595 @@
+{
+  "format": "agentops-public-file-manifest/1",
+  "candidate": "0.1.0-draft.1",
+  "wire_draft": "AGENTOPS/1",
+  "scope": "Exact reviewed public allowlist. Additional files fail validation.",
+  "metadata_files": [
+    "MANIFEST.sha256",
+    "PUBLIC_FILES.json"
+  ],
+  "self_hash_note": "This manifest is covered by MANIFEST.sha256 and the external archive digest; no circular self-hash.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 55,
+      "sha256": "490c3a94b0215dba35595ecf0dee279a8d9d76d2b2a07817bc2c3cffca30c176",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 79,
+      "sha256": "a47a00e82535076ace8df43c8d01a804a746461deca450a1fb950cdfeecdedd9",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 472,
+      "sha256": "794af00cd9a1eb8afdabbb91efab1f5e65284f09d758c2fa259de6b9a2e8f414",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1829,
+      "sha256": "b775100db0c4015b016044cb03fdc0f926468a21f16e412e03fe0f39e15f8a34",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "DEPENDENCIES.json",
+      "bytes": 2042,
+      "sha256": "55d9aed2a06ad1754736ccdfdb760258c493e18393f3c7e95c8a10974802ae23",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "bytes": 1828,
+      "sha256": "ce6c2933152fb29693b4582dfea7670139814a09d456951ef05573df6ad1bbfd",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "4b23831df358620b1a51b059c12028d6ef5df3e9af33acce697a387e50640b8f",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4056,
+      "sha256": "190eb87a1c9a774df9a4fc590ebd3176d74fe22b4ff9f5b8f0a97a9f298da54e",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 1375,
+      "sha256": "80b3bcc2aed22ecced876678f3a15dadfbd2963c589b846934fe0a6fc299ba0f",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 2025,
+      "sha256": "78c0a4791397af5d565f8a17733c85e6ffd692ad86ec699859064242e4f36a14",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1703,
+      "sha256": "fbd6600a4ff4fe5600a9077ae6117927979f767f95cc44b3c9c1d4203c436626",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "agentops_reference/__init__.py",
+      "bytes": 111,
+      "sha256": "26de55dafedd3416d8cb68a55ce56ef3e03b44878b99fd0c74471b237d3a838d",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "agentops_reference/contracts.py",
+      "bytes": 8770,
+      "sha256": "399402d1cac00c396759e23a8ad3978e3463d5692248d6a9f82e2dba25944ee7",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "agentops_reference/demo.py",
+      "bytes": 4701,
+      "sha256": "fc103270a135d8ddab9b9c8043d555ea0ea5f5cff81e64e08a2f372ca281854e",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "agentops_reference/example_handoff.py",
+      "bytes": 6417,
+      "sha256": "335cfde8181d2f2cec7efe77f19017a76a510cddaecd20782239ca6975322b40",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "agentops_reference/ledger.sql",
+      "bytes": 2554,
+      "sha256": "dbc25065937fa8689bebe130e6d0da09d8bad14f03ad63c6a1092981204198e1",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "agentops_reference/model.py",
+      "bytes": 5788,
+      "sha256": "ab23c7610bf83aa37bde83580fc4a9eb22ac4a0e98bc0825a3a3c9bca017dbe4",
+      "purpose": "offline reference code, not an operational runtime"
+    },
+    {
+      "path": "docs/CONFORMANCE.md",
+      "bytes": 2523,
+      "sha256": "ec4564bb42269e18497cef450384a3617674880e577178a59c1fcf0c65314bcb",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/DISTRIBUTION.md",
+      "bytes": 1848,
+      "sha256": "e7bbf083765c806ddfc45db41b7b90afe955a79b5d4ed128d92f3ad479230b4f",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/PUBLISHING.md",
+      "bytes": 4262,
+      "sha256": "4c7f7c2f15416ff04f3c2e10d29c9682a9c71bf4f1c3d57883ff985e611630e7",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/RELEASE_GATES.md",
+      "bytes": 2118,
+      "sha256": "9d10707facfc2da65b2d8f72a2884fd194ba8ba1180249ef4be62e83e7c942a8",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/adapters/REFERENCE_ADAPTERS.md",
+      "bytes": 2943,
+      "sha256": "14c0a96ab6a9ec738b7a9678f596272501283a3492d42be2bf3e26fdc2879989",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE.md",
+      "bytes": 3077,
+      "sha256": "bb1d5612e712c436d548a6d30e0e2cc3e255ea79cbb6c13bd553d774aab6bb24",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "docs/spec/1/SPECIFICATION.md",
+      "bytes": 9283,
+      "sha256": "e509bab8cf785926a63a54df3df16bd769819a41dfd2ed18a8e36ee3685c376b",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "fixtures/README.md",
+      "bytes": 691,
+      "sha256": "66a712c3496f492dd4767018f0fdd5c65d9eb2a5bd5c767a14f666b62ae9aed6",
+      "purpose": "synthetic fixtures only"
+    },
+    {
+      "path": "fixtures/contract-graph.json",
+      "bytes": 16063,
+      "sha256": "bee6c9cfb3c99ab76e202fd78f45df0c90f5c1112cfb2019a918c404abe8e606",
+      "purpose": "synthetic fixtures only"
+    },
+    {
+      "path": "fixtures/synthetic-handoff.md",
+      "bytes": 851,
+      "sha256": "35029e878cffbec1b322a5bfee7183771f45f232e71ab9e1a74cb1475aad04e8",
+      "purpose": "synthetic fixtures only"
+    },
+    {
+      "path": "policies/AUTONOMY.md",
+      "bytes": 1353,
+      "sha256": "c2b074489e7a013493964ba63ff2bc3846d2e6aaabee8f4f5a2b2397663eb9c9",
+      "purpose": "universal documentation and policies"
+    },
+    {
+      "path": "reports/local-tests.json",
+      "bytes": 916,
+      "sha256": "df9f2d977fa0f7d1b289de51416c8d015d9536142bfa4e15f81f487a2367d92e",
+      "purpose": "sanitized local source-candidate evidence"
+    },
+    {
+      "path": "reports/privacy-audit.json",
+      "bytes": 1487,
+      "sha256": "f896a56aa690b76a399f960101a7cc2e1e74fcdc14368ca3ac315735c1f0d7ed",
+      "purpose": "sanitized local source-candidate evidence"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 171,
+      "sha256": "77dbff3bcf9d308a141aa1d4ad4656112d4c1e2efae2a30b9c960309ad8eae20",
+      "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "schemas/1/AgentIdentity.schema.json",
+      "bytes": 2179,
+      "sha256": "4618d3d3dbe4b36e4288f4fa6e1bc0d1d3d415ca26685dfc0617fa4b028d0109",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/ApprovalRequest.schema.json",
+      "bytes": 2489,
+      "sha256": "6beaefe46591ece3f8403c3052b2c3ef160b12e7f444d626e9c8ed57e5f354ec",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/Authorization.schema.json",
+      "bytes": 2741,
+      "sha256": "2ed92fe088810d32c27af60469a54dfdcb8a6b0a6221d4fecfc152a2820c3880",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/Event.schema.json",
+      "bytes": 3401,
+      "sha256": "fc89196375156c9fc83175586ebf3066586ee014eb7499a0c5369ff76c97ee48",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/EvidenceBundle.schema.json",
+      "bytes": 4303,
+      "sha256": "638baf1e8e7b77155a84aa254388fb59df68666acf454906edeaffdc245fa7cb",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/Execution.schema.json",
+      "bytes": 3054,
+      "sha256": "afd1a34fca0061b5abb9ff64849d17739da2fe34deab74a4812bf091ae3e915a",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/ExecutionAttempt.schema.json",
+      "bytes": 2603,
+      "sha256": "f2f83feaeb081d522960a976356b995cfcbbda49cdeda9d1741a34f823c32634",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/ExecutionResult.schema.json",
+      "bytes": 3605,
+      "sha256": "dba505563a69558d94597a884fb2d6003e0882a214d461c530b25ace5c83ea2a",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/HandoffMessage.schema.json",
+      "bytes": 3166,
+      "sha256": "84d1f8287026c51779887598032b197f3aeac1fee2175360d0798e04f77d57bd",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/Incident.schema.json",
+      "bytes": 2951,
+      "sha256": "14749c7212b54886e1231d39e0cde05e1ce20822cc158b079ead9a29e648b5e6",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/ProjectConfig.schema.json",
+      "bytes": 4695,
+      "sha256": "71c1963652bddff665985e7caf58cc56b27cdc05f1d72626a7847c3514d8d376",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/README.md",
+      "bytes": 1393,
+      "sha256": "5b304febd7c96aee4b4f79e320c83ddd66f2a0295afcaf7e456d083a0952645f",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/RecoveryAction.schema.json",
+      "bytes": 2691,
+      "sha256": "3563bca8a95a28b37a0a0ba613c3371374035cc4dad2ad5c51777d4534e2ee18",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/Task.schema.json",
+      "bytes": 3078,
+      "sha256": "ff22ec67bb4d7e842465ae58b57c6aa742d445727844e0f3c588696dc3e9929c",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/TaskAssignment.schema.json",
+      "bytes": 2648,
+      "sha256": "5e3e16e0e7873cfa7571ed4436d710182b68b69381d1e1ddbdcfe16378c73c41",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/TeamIdentity.schema.json",
+      "bytes": 1821,
+      "sha256": "13f326924c79344b97a2b3b5b41d8daafaaf6b32647740bfb12fdac51b9efb1b",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/common.schema.json",
+      "bytes": 13828,
+      "sha256": "a695962ddcadf81c6f0d42a9bc8b1afc4ff36a2b55b085c50fb29da57398582b",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/index.json",
+      "bytes": 5265,
+      "sha256": "c7c8d328f4a899dfc7480370f95397b4398a60589b0d85e907619a6ea29cf6ed",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/AgentIdentity.json",
+      "bytes": 564,
+      "sha256": "953cfe88ba58b35f927546e2e0c763a915ce130b9f6a00e5cbf6e5a8b16eaac7",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/ApprovalRequest.json",
+      "bytes": 1214,
+      "sha256": "83ed67fec46996847f6ac37c67f9d14d5580506ca04606d798938958a7cd6570",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/Authorization.json",
+      "bytes": 1236,
+      "sha256": "f3109279f6203d495291db9de807839a9f62ba251fb8dc50960a88939b9408b5",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/Event.json",
+      "bytes": 1255,
+      "sha256": "f5c025b2b9ffe96733c4ec94c2f59dbc56e18b40093c93553512cf459a37c8f8",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/EvidenceBundle.json",
+      "bytes": 1166,
+      "sha256": "d1ae983fbbcbc20e2de722c7837855ec2a1208afcbf68f653fe5cd3fd687ea39",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/Execution.json",
+      "bytes": 1193,
+      "sha256": "dfee8691f44c524901a01188c056663936e8df6175169b07b64ca1e374f3a581",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/ExecutionAttempt.json",
+      "bytes": 714,
+      "sha256": "01c0c5de63090b8b9e3c5c85e2536773f001479a263d7ae85cb8ba117729d9bd",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/ExecutionResult.json",
+      "bytes": 1289,
+      "sha256": "c30418d93aa71a5ca10b6eb869936296b7b442005344ca3eba1dd6113cf4b6df",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/HandoffMessage.json",
+      "bytes": 1243,
+      "sha256": "c2e1baa4647ec7d5068a891247c7cb0ea9d625354a9d64bf9768258f352e0852",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/Incident.json",
+      "bytes": 624,
+      "sha256": "686d6053a84994a538b249d829f764221feb7893211aa25b559b307f1229f0fc",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/ProjectConfig.json",
+      "bytes": 1431,
+      "sha256": "759b23a6a16f41525113640ec29175c5a4671076bce0ce6565a65eb8950cf82f",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/RecoveryAction.json",
+      "bytes": 505,
+      "sha256": "faf17c4071406b308ef078a5fabecbe536419a559e7712ea94946e684bf29758",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/Task.json",
+      "bytes": 2015,
+      "sha256": "02ffbf240c545e8a3244c3c6f59334c8d77a7cfcd87c7f3660b3b9b03c5e2457",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/TaskAssignment.json",
+      "bytes": 695,
+      "sha256": "72dddaaa537df4044806bfb83f2f6b637c51cf207e921c413d6e818aaf476d52",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/TeamIdentity.json",
+      "bytes": 445,
+      "sha256": "451445df673cb2da45e0fbecdf566a0f21bfd57510f37598c610cc5d2cb97c6c",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/bad-date.json",
+      "bytes": 2026,
+      "sha256": "90944f29d5398f2a23842f3e7fd5eb1a1d367cd15488183fe6df278fcf864618",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/secret-field.json",
+      "bytes": 2077,
+      "sha256": "18d832c6a27b1c2e32df8c04bdd5b7b02323236d5791fb91fa2d6bfa28d181b0",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/unbounded-budget.json",
+      "bytes": 2039,
+      "sha256": "0e387a5c83fe7df4c25920f31a13f9f900a36158a536a3610467a1060948b81d",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/unknown-state.json",
+      "bytes": 2036,
+      "sha256": "7691ce60711957fce4ee9eb38520a71809fd4d2adce8610cf8e53933079b4cb0",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/invalid/unpinned-sha.json",
+      "bytes": 1999,
+      "sha256": "64fec97fb20bdb53cd3359a07a930c8de95704693dbaf8248f870ab1fe175b2c",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/AgentIdentity.json",
+      "bytes": 616,
+      "sha256": "e0d491120906230df90b9488e9293ce4a56d9da0bdf1595e831fb958a7d6c7bc",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/ApprovalRequest.json",
+      "bytes": 1363,
+      "sha256": "e89dd4aee8035382207003349af9b0e97d740a9c15aa33b05fcfc52fb7d6da39",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/Authorization.json",
+      "bytes": 1267,
+      "sha256": "f5aa7c202189d12e7f9b40572479b67cca65d9030a04fbbb83fa2e4307a0ebee",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/Event.json",
+      "bytes": 1298,
+      "sha256": "1fe45c764fae80fe24d0acf0bc0c4b8b7b92425d7de2350409339adb2149ab78",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/EvidenceBundle.json",
+      "bytes": 1218,
+      "sha256": "aef98813b8bb23c30b578cac411a6e261b2ac3238b1aa7ec1713efa144a64d54",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/Execution.json",
+      "bytes": 1245,
+      "sha256": "492afae977ed56eaf4233301a451a1104a7148bda16f83be5252df7ab6f06904",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/ExecutionAttempt.json",
+      "bytes": 776,
+      "sha256": "057419b1a87754d3deaaaf9055900a726eb3d8d61983bb70ee706535133a85d8",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/ExecutionResult.json",
+      "bytes": 1341,
+      "sha256": "305566221c3add68b24f0845854ab047e33904de7c30e62653dc1a66e78dcaed",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/HandoffMessage.Example.json",
+      "bytes": 2804,
+      "sha256": "3a7556508e59fe5892a3a197fa42aac21b17b92f7dd1440a1fdb48c78dc98cba",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/HandoffMessage.json",
+      "bytes": 1295,
+      "sha256": "3a41d377b456a6db1edcc685cac8202b091407434ba3d73b6cf4788dfc32ffa4",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/Incident.json",
+      "bytes": 676,
+      "sha256": "a9dc9bcfe5238ffb8c62c3ef7cf497fe5705f885b9f603dfd2a29276fd6bebd8",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/ProjectConfig.json",
+      "bytes": 1432,
+      "sha256": "35c9ef54d95287b0c752bd0ceaae8ed7adc39fc3fe6666e25200dda2318dbafa",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/RecoveryAction.json",
+      "bytes": 565,
+      "sha256": "f1103c6d7548bae84f3a55388762bda6bf89357dbf48b0bd808312476d927d31",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/Task.json",
+      "bytes": 2037,
+      "sha256": "0370fc1b1566d681fd7d56ce28c5e441ba10d2497ab7788834ba3516d703e55f",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/TaskAssignment.json",
+      "bytes": 747,
+      "sha256": "fbd7e04cd8e0e8da280cdf5f9174b5484e3e41a4552404cf5977e53820577eeb",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "schemas/1/examples/valid/TeamIdentity.json",
+      "bytes": 510,
+      "sha256": "b1e1a7b20a4a0312b0dbc47c4f0a888c17903d36619de4afdba83512db544da6",
+      "purpose": "schemas and synthetic structural examples"
+    },
+    {
+      "path": "templates/project/AUTONOMY_POLICY.md",
+      "bytes": 704,
+      "sha256": "cf9be40919456f4dd4ec75e255846a94d69c6fae9d53caa6fbbe61d8d32305e2",
+      "purpose": "inactive project adoption templates"
+    },
+    {
+      "path": "templates/project/COORDINATOR.md",
+      "bytes": 1210,
+      "sha256": "2ce96e170cfc4142f4a398f9cf127c002ce751d2a5b666d69ee23dfb057a2dde",
+      "purpose": "inactive project adoption templates"
+    },
+    {
+      "path": "templates/project/README.md",
+      "bytes": 924,
+      "sha256": "38ac4a3dc200d9cd88a98033a247c64ef6b7743aadf49f3e1a577f3a7ebd062d",
+      "purpose": "inactive project adoption templates"
+    },
+    {
+      "path": "templates/project/SUBAGENT.md",
+      "bytes": 839,
+      "sha256": "2bf120604a6e3dc1e556a50fab7a06d6f468e03e939d3d717ac337f04ae34cca",
+      "purpose": "inactive project adoption templates"
+    },
+    {
+      "path": "templates/project/project.json",
+      "bytes": 1432,
+      "sha256": "35c9ef54d95287b0c752bd0ceaae8ed7adc39fc3fe6666e25200dda2318dbafa",
+      "purpose": "inactive project adoption templates"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "bytes": 4773,
+      "sha256": "a093b116d335a4d1ca54b7e1e9ae5f7baf48eb5edad5cb56cda97d60d4ebb6cb",
+      "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tests/test_example_handoff.py",
+      "bytes": 3671,
+      "sha256": "c79f510d60a95ce6ab658f5981d3773383ae71db76ba47319dd01c0275211a87",
+      "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tests/test_formats.py",
+      "bytes": 2171,
+      "sha256": "cf944a231e3671179a25b1275923272167e4644d63712294d6686ab772655d07",
+      "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 6495,
+      "sha256": "2d552a6ffef9f660f666586e17ef0f99d3617f9b36c997d2237f796942c9bf52",
+      "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tests/test_public_audit.py",
+      "bytes": 3263,
+      "sha256": "dacc9b6202f458d9824a856f9c88bd4648a3619650162132ebcf54ef617e83ad",
+      "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tools/audit_public.py",
+      "bytes": 10442,
+      "sha256": "8b416619e61ad559fd255013e516c01e07f08f958f59ce689ed737dbde716f49",
+      "purpose": "offline validation and export auditing"
+    },
+    {
+      "path": "tools/check.py",
+      "bytes": 2824,
+      "sha256": "864835851b9511c1834959055d599918af53c40c4bbe0dbca3882d8848d936a7",
+      "purpose": "offline validation and export auditing"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "ApprovalRequest",
+  "id": "urn:agentops:example-project:approval:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "approver_owner_ids": [
+    "urn:agentops:example-project:human:2"
+  ],
+  "scope": {
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "actions": [
+      "publish_result"
+    ],
+    "artifact_digests": [],
+    "max_effects": 1
+  },
+  "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "prepared_bundle": {
+    "bundle_id": "urn:agentops:example-project:evidence:1",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "reason": "Request explicit publication of exact report",
+  "expires_at": "2025-01-01T12:20:00Z",
+  "status": "PENDING",
+  "decision_ref": null
+}

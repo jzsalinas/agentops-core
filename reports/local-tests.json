@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Local schemas, selected guards, pure synthetic reference functions, format/privacy checks and in-memory SQL constraints only",
+  "tests_run": 49,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "schema_files": 16,
+  "positive_examples": 16,
+  "negative_examples": 20,
+  "internal_links_checked": 21,
+  "python_version": "3.14.4",
+  "dependencies": {
+    "jsonschema": "4.19.2",
+    "referencing": "0.36.2",
+    "PyYAML": "6.0.3",
+    "attrs": "25.4.0",
+    "jsonschema-specifications": "2023.12.1",
+    "rpds-py": "0.27.1"
+  },
+  "remote_requests": 0,
+  "model_invocations": 0,
+  "external_effects": 0,
+  "workflows_created": 0,
+  "not_verified": [
+    "Operational authority issuer",
+    "Real provider execution",
+    "Remote delivery or publication",
+    "Durable worker or multiprocess crash recovery",
+    "Production operations",
+    "External protocol compatibility"
+  ]
+}

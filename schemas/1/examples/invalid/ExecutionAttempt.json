@@ -1,0 +1,26 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "ExecutionAttempt",
+  "id": "urn:agentops:example-project:attempt:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "attempt_number": 1,
+  "fencing_token": 1,
+  "started_at": "2025-01-01T12:00:00Z",
+  "ended_at": "2025-01-01T12:20:00Z",
+  "status": "SUCCEEDED",
+  "failure_code": null,
+  "metrics": {
+    "wall_seconds": 1,
+    "tokens": null,
+    "cost_minor": null,
+    "external_effects": 0
+  },
+  "evidence_refs": [
+    {
+      "bundle_id": "urn:agentops:example-project:evidence:1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ]
+}

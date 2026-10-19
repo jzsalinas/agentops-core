@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.org/agentops/1/RecoveryAction.schema.json",
+  "title": "RecoveryAction",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "AGENTOPS/1"
+    },
+    "kind": {
+      "const": "RecoveryAction"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:recovery:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "record_revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000000
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:project:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "incident_id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:incident:[A-Za-z0-9._-]+$",
+      "maxLength": 240
+    },
+    "action": {
+      "enum": [
+        "RECONCILE",
+        "RETRY_READ_ONLY",
+        "CANCEL",
+        "REBASELINE",
+        "ESCALATE",
+        "COMPENSATE"
+      ]
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "maxItems": 1000
+    },
+    "authorization_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^urn:agentops:[a-z0-9-]+:authorization:[A-Za-z0-9._-]+$",
+          "maxLength": 240
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "max_attempts": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "AUTHORIZED",
+        "RUNNING",
+        "SUCCEEDED",
+        "FAILED",
+        "BLOCKED"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/evidence_ref"
+      },
+      "minItems": 0,
+      "uniqueItems": true,
+      "maxItems": 1000
+    },
+    "forbidden_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "maxItems": 1000
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "record_revision",
+    "project_id",
+    "created_at",
+    "incident_id",
+    "action",
+    "preconditions",
+    "authorization_id",
+    "max_attempts",
+    "status",
+    "evidence_refs",
+    "forbidden_effects"
+  ],
+  "additionalProperties": false
+}

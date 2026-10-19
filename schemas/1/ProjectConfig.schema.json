@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.org/agentops/1/ProjectConfig.schema.json",
+  "title": "Inactive synthetic project template",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "AGENTOPS/1"
+    },
+    "kind": {
+      "const": "ProjectConfig"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:agentops:[a-z0-9-]+:config:[A-Za-z0-9._-]+$"
+    },
+    "project_id": {
+      "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/id"
+    },
+    "status": {
+      "const": "DRAFT"
+    },
+    "execution_enabled": {
+      "const": false
+    },
+    "transport": {
+      "const": "MANUAL_ONESHOT"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/uri"
+      },
+      "minItems": 0,
+      "maxItems": 0,
+      "uniqueItems": true
+    },
+    "owner_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/id"
+      },
+      "minItems": 2,
+      "maxItems": 100,
+      "uniqueItems": true
+    },
+    "team_roles": {
+      "type": "object",
+      "properties": {
+        "executor_team_id": {
+          "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/id"
+        },
+        "reviewer_team_id": {
+          "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/id"
+        }
+      },
+      "required": [
+        "executor_team_id",
+        "reviewer_team_id"
+      ],
+      "additionalProperties": false
+    },
+    "executors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "executor_id": {
+            "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/id"
+          },
+          "enabled": {
+            "const": false
+          },
+          "mode": {
+            "enum": [
+              "DETERMINISTIC",
+              "AGENT_RUNTIME_UNDECIDED"
+            ]
+          },
+          "provider": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "network": {
+            "const": "DENIED"
+          },
+          "subagents_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "executor_id",
+          "enabled",
+          "mode",
+          "provider",
+          "network",
+          "subagents_enabled"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 100,
+      "uniqueItems": true
+    },
+    "credential_refs": {
+      "type": "object",
+      "properties": {
+        "reader": {
+          "type": "null"
+        },
+        "publisher": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "reader",
+        "publisher"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "const": "read-only-review"
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "const": "analyze_read_only"
+          },
+          "minItems": 1,
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "external_effects_enabled": {
+          "const": false
+        },
+        "budget": {
+          "$ref": "https://schemas.example.org/agentops/1/common.schema.json#/$defs/budget"
+        },
+        "deadline_seconds": {
+          "const": 1200
+        },
+        "lease_seconds": {
+          "const": 60
+        },
+        "heartbeat_seconds": {
+          "const": 15
+        },
+        "max_read_api_attempts": {
+          "const": 3
+        }
+      },
+      "required": [
+        "profile",
+        "allowed_actions",
+        "external_effects_enabled",
+        "budget",
+        "deadline_seconds",
+        "lease_seconds",
+        "heartbeat_seconds",
+        "max_read_api_attempts"
+      ],
+      "additionalProperties": false
+    },
+    "retention_days": {
+      "type": "object",
+      "properties": {
+        "synthetic_evidence": {
+          "const": 14
+        },
+        "audit_and_dedupe": {
+          "const": 90
+        }
+      },
+      "required": [
+        "synthetic_evidence",
+        "audit_and_dedupe"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "project_id",
+    "status",
+    "execution_enabled",
+    "transport",
+    "repositories",
+    "owner_ids",
+    "team_roles",
+    "executors",
+    "credential_refs",
+    "policy",
+    "retention_days"
+  ],
+  "additionalProperties": false
+}
