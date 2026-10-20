@@ -1,0 +1,26 @@
+{
+  "format": "agentops-onboarding-scenario/1",
+  "id": "existing-agents",
+  "synthetic": true,
+  "request": "We already have agent instructions. Assess whether AgentOps adds anything without replacing our controls.",
+  "context": {
+    "network": "offline",
+    "source": {
+      "channel": "https://releases.example.org/agentops",
+      "status": "published",
+      "version": "1.4.2",
+      "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "trust": "Scenario stipulates an authenticated release and artifact verified using the owner-preapproved offline trust anchor. Hypothetical evidence only, not a real release."
+    },
+    "teams": 1
+  },
+  "files": {
+    "AGENTS.md": "# Existing project rules\nPreserve this file. Read docs/POLICY.md. No installs or external access.\n",
+    "src/AGENTS.md": "# Scoped rules\nSource changes require the code owner. Assessment must not edit source.\n",
+    "README.md": "# Sample web application\nTypeScript with reviewed tests.\n",
+    "package.json": "{\"name\": \"sample-app\", \"private\": true, \"scripts\": {\"test\": \"example-test-runner\"}, \"dependencies\": {}}",
+    "docs/POLICY.md": "Use existing review requests, evidence references and docs/DECISIONS.md. Owner approval is required.\n",
+    "docs/DECISIONS.md": "# Existing decisions\n"
+  }
+}

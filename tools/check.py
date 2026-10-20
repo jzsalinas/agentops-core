@@ -34,13 +34,13 @@ def check():
             links += 1
     index = json.loads((ROOT/'schemas/1/examples/index.json').read_text())
     packages = ['jsonschema','referencing','PyYAML','attrs','jsonschema-specifications','rpds-py']
-    return {'status':'PASS','scope':'Local schemas, selected guards, pure synthetic reference functions, format/privacy checks and in-memory SQL constraints only',
+    return {'status':'PASS','scope':'Local schemas, selected guards, pure synthetic reference functions, format/privacy checks, in-memory SQL constraints and onboarding package/corpus checks only',
       'tests_run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped),
       'schema_files':len(list((ROOT/'schemas/1').glob('*.schema.json'))),'positive_examples':sum(x['valid'] for x in index),'negative_examples':sum(not x['valid'] for x in index),
       'internal_links_checked':links,'python_version':'.'.join(map(str,sys.version_info[:3])),
       'dependencies':{n:importlib.metadata.version(n) for n in packages},
       'remote_requests':0,'model_invocations':0,'external_effects':0,'workflows_created':0,
-      'not_verified':['Operational authority issuer','Real provider execution','Remote delivery or publication','Durable worker or multiprocess crash recovery','Production operations','External protocol compatibility']}
+      'not_verified':['Operational authority issuer','Real provider execution','Remote delivery or publication','Durable worker or multiprocess crash recovery','Production operations','External protocol compatibility','Host skill installation or discovery','Live model evaluation (reported separately)','Consumer adoption or activation','Cryptographic release verification for onboarding']}
 
 
 if __name__ == '__main__':
