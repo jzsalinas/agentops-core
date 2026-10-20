@@ -21,3 +21,10 @@ A parent may delegate only a subset of its resources, actions, budget, and deadl
 Subagents cannot approve each other, renew authority, or reset aggregate limits.
 Technical capability, credential possession, and human authorization are separate.
 Silence never grants approval. New standard versions never silently renew grants.
+
+The optional [effect-plan guide](../docs/guides/EFFECT_PLAN.md) illustrates these existing
+boundaries. Same-effect confirmations require permission under every applicable rule;
+a human instruction to consult each dialogue remains binding. A plan does not renew
+consent or authorize a new destination. The optional
+[destination guide](../docs/guides/DESTINATION_PROJECTION.md) describes minimization before
+emission; its local examples do not enforce a real tool boundary.

@@ -23,11 +23,16 @@ service, or live agent session is installed by using this repository.
 
 ## Explore
 
+The local [first evolution proposal](AGENTOPS_RFC_REVIEW.md) adds optional guides,
+fictional fixtures, a resume template and persistent-runtime experiment criteria.
+It is unreleased and awaits maintainer review; AGENTOPS/1 native schemas are unchanged.
+
 | Document | Purpose |
 | --- | --- |
 | [Specification](docs/spec/1/SPECIFICATION.md) | Contracts, identity, state dimensions, evidence, authority, and reliability |
 | [Architecture](docs/architecture/ARCHITECTURE.md) | Core and three independent adapters |
 | [Distribution](docs/DISTRIBUTION.md) | Version locks, review, releases, and explicit consumer adoption |
+| [Project adoption](docs/PROJECT_ADOPTION.md) | Voluntary consumer update PR, tests, approval, activation and adoption record |
 | [Adapter designs](docs/adapters/REFERENCE_ADAPTERS.md) | Optional transports, executors, and trigger modes |
 | [Conformance](docs/CONFORMANCE.md) | Implemented, tested, proposed, and blocked claims |
 | [Roadmap](ROADMAP.md) | Small reviewable implementation stages |

@@ -44,3 +44,13 @@ EXAMPLE-HANDOFF/1 fixture dialect. It returns an additive normalized view and un
 source bytes, always with scheduling/authority disabled. It rejects ambiguous or
 unsafe YAML. Unknown forms require review; this is not proof of interoperability
 with another project's existing protocol.
+
+## Candidate profile integration boundaries
+
+Optional [effect plans](../guides/EFFECT_PLAN.md),
+[criterion observations](../guides/EVIDENCE_ACCEPTANCE.md) and
+[destination projections](../guides/DESTINATION_PROJECTION.md) require explicit adopted
+profile bindings. Trusted adapters must supply actual authority, revision, provenance,
+settlement and destination-policy facts. The local predicates simulate those inputs;
+they do not implement these adapter ports. The
+[persistent experiment](../experimental/PERSISTENT_RUNTIME.md) defines future evidence gates.

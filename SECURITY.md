@@ -35,3 +35,13 @@ configured by this source export.
 Security fixes, revocation, and consumer upgrades remain explicit decisions.
 No live support SLA or vulnerability-free status is claimed. Dependency versions
 are reproducibility pins, not security certification.
+
+## Optional pre-emission experiment
+
+The [destination projection guide](docs/guides/DESTINATION_PROJECTION.md) and synthetic
+fixtures refine existing minimization guidance. Real adapters need trusted selectors,
+field and value policies before tool/model/log/error emission. Redactions cannot undo
+earlier disclosure. The local tests and public auditor do not establish coverage of
+real infrastructure channels. Exact-tree independent agent review and resolution of
+blocking findings are publication gates; human authorization for the exact commit remains
+separate. Neither review nor a passing scanner certifies absence of every disclosure.

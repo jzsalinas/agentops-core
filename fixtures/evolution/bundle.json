@@ -1,0 +1,69 @@
+{
+  "schema_version": "AGENTOPS/1",
+  "kind": "EvidenceBundle",
+  "id": "urn:agentops:example-project:evidence:1",
+  "record_revision": 1,
+  "project_id": "urn:agentops:example-project:project:1",
+  "created_at": "2025-01-01T12:00:00Z",
+  "task_id": "urn:agentops:example-project:task:1",
+  "task_revision": 1,
+  "execution_id": "urn:agentops:example-project:execution:1",
+  "attempt_id": "urn:agentops:example-project:attempt:1",
+  "resource": {
+    "resource_id": "urn:agentops:example-project:resource:1",
+    "repository_ref": "https://example.invalid/repo/demo",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "revision_status": "PINNED",
+    "paths": [
+      "README.md"
+    ]
+  },
+  "evidence_class": "AUTOMATED_LOCAL",
+  "observed_at": "2025-01-01T12:00:00Z",
+  "environment_summary": "Pure Python fixture; offline; synthetic",
+  "procedure": [
+    "Inspect fixture text without executing source"
+  ],
+  "result": "PASS",
+  "artifacts": [
+    {
+      "artifact_id": "urn:agentops:example-project:artifact:publication-body-txt",
+      "uri": "https://example.invalid/artifacts/publication-body.txt",
+      "digest": "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+      "bytes": 47,
+      "media_type": "text/plain"
+    },
+    {
+      "artifact_id": "urn:agentops:example-project:artifact:effect-plan-json",
+      "uri": "https://example.invalid/artifacts/effect-plan.json",
+      "digest": "sha256:7158274860e0af66155e406b315765b23956181f9c84e51d59fb7cc45372f26c",
+      "bytes": 1577,
+      "media_type": "application/json"
+    },
+    {
+      "artifact_id": "urn:agentops:example-project:artifact:evidence-acceptance-json",
+      "uri": "https://example.invalid/artifacts/evidence-acceptance.json",
+      "digest": "sha256:cd6a17eec46b8baae66fe08e942ca451d68fa675f1bbe78149d13b9b2f5d9f65",
+      "bytes": 1637,
+      "media_type": "application/json"
+    },
+    {
+      "artifact_id": "urn:agentops:example-project:artifact:destination-projection-json",
+      "uri": "https://example.invalid/artifacts/destination-projection.json",
+      "digest": "sha256:cfc94307230fe29b2ecdb360d8a0a5593edd2fd063e3367123857af88c7241fb",
+      "bytes": 584,
+      "media_type": "application/json"
+    }
+  ],
+  "claims_supported": [
+    "Fictional artifacts are prepared with exact byte references"
+  ],
+  "claims_not_supported": [
+    "No authority issuance, actual instrumentation, remote effect or privacy guarantee established"
+  ],
+  "limitations": [
+    "Synthetic local examples only"
+  ],
+  "supersedes_ids": [],
+  "redactions": []
+}

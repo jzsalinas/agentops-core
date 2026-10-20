@@ -18,3 +18,17 @@ All stages after the offline reference implementation are proposed. No date, hos
 service, model, price, or automatic activation is promised. Each stage has a reviewable
 artifact and an explicit acceptance decision rather than a claim inherited from use
 in another environment.
+
+## First evolution proposal: current state
+
+The [five-RFC review](AGENTOPS_RFC_REVIEW.md) and [decisions](AGENTOPS_RFC_DECISIONS.md)
+prepare optional documentation, fictional fixtures and selected local acceptance
+experiments for step 1. A reference-only resume template and a universal project adoption
+guide are prepared. Publication requires exact-tree security review without blocking
+findings and exact-commit maintainer authorization; no operational adoption
+or measured efficiency improvement is inferred.
+
+Steps 2–4 now have an [experimental acceptance specification](docs/experimental/PERSISTENT_RUNTIME.md)
+covering overlapping resources, asynchronous barriers, processes, durable recovery,
+idempotency and monotonic accounting. Their implementation and execution remain
+PROPOSED. Steps 5–6 remain PROPOSED, with no service or workflow configured here.

@@ -2,7 +2,7 @@
   "format": "agentops-public-file-manifest/1",
   "candidate": "0.1.0-draft.1",
   "wire_draft": "AGENTOPS/1",
-  "scope": "Exact reviewed public allowlist. Additional files fail validation.",
+  "scope": "Exact proposed public allowlist for controlled contribution; public push requires exact-commit maintainer authorization.",
   "metadata_files": [
     "MANIFEST.sha256",
     "PUBLIC_FILES.json"
@@ -22,9 +22,39 @@
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
+      "path": "AGENTOPS_COMPATIBILITY_REPORT.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 4004,
+      "sha256": "1b1be465e7972f1f854a316fde877d2641e0a5205f9563c43fa6996e9876289f"
+    },
+    {
+      "path": "AGENTOPS_EVOLUTION_PLAN.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 2906,
+      "sha256": "9d1f53f6a72d0931103e6129f630629119b469baeb24861e7991bad3750f40fc"
+    },
+    {
+      "path": "AGENTOPS_RFC_DECISIONS.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 2949,
+      "sha256": "4f705a1efc5d677269183a138ed63bf57c4597da536e321f984a8035d78ed66b"
+    },
+    {
+      "path": "AGENTOPS_RFC_REVIEW.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 5657,
+      "sha256": "6abade811c842a89569034957958a195fab9c92730bdfd60fc8cef283bbec87f"
+    },
+    {
+      "path": "AGENTOPS_TEST_RESULTS.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 4919,
+      "sha256": "fcc49daf889bc87de56360120dbf28f1b2d3dc03317ce852c671244bb8600216"
+    },
+    {
       "path": "CHANGELOG.md",
-      "bytes": 472,
-      "sha256": "794af00cd9a1eb8afdabbb91efab1f5e65284f09d758c2fa259de6b9a2e8f414",
+      "bytes": 974,
+      "sha256": "3eb273127249a452bbe052a17e5510a3b800d625766513f58735b68be4c72e9b",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
@@ -53,20 +83,20 @@
     },
     {
       "path": "README.md",
-      "bytes": 4056,
-      "sha256": "190eb87a1c9a774df9a4fc590ebd3176d74fe22b4ff9f5b8f0a97a9f298da54e",
+      "bytes": 4439,
+      "sha256": "4b0cda13ea41a2c07b0c985e129f8b1598fa1f35437df8e83b0eb2937578b9b0",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 1375,
-      "sha256": "80b3bcc2aed22ecced876678f3a15dadfbd2963c589b846934fe0a6fc299ba0f",
+      "bytes": 2243,
+      "sha256": "5ccf81cd1c748643c174ebc85133db68ad30700c3276c01586bae1a8497fb127",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
       "path": "SECURITY.md",
-      "bytes": 2025,
-      "sha256": "78c0a4791397af5d565f8a17733c85e6ffd692ad86ec699859064242e4f36a14",
+      "bytes": 2667,
+      "sha256": "aac5229b1b3f4c8357566bf5346ee813a25eddad4f46369a9530d093b3372eb4",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
@@ -112,45 +142,87 @@
       "purpose": "offline reference code, not an operational runtime"
     },
     {
+      "path": "agentops_reference/profile_checks.py",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 5088,
+      "sha256": "d74be877d395fb6a2c8b3d00a9ee22c5a03993ef5f275990e454fa50c6428b6a"
+    },
+    {
       "path": "docs/CONFORMANCE.md",
-      "bytes": 2523,
-      "sha256": "ec4564bb42269e18497cef450384a3617674880e577178a59c1fcf0c65314bcb",
+      "bytes": 3326,
+      "sha256": "13f1f969c772d56d6e40f31616c0bd3646a70153d143106f46ad4cca62438d3e",
       "purpose": "universal documentation and policies"
     },
     {
       "path": "docs/DISTRIBUTION.md",
-      "bytes": 1848,
-      "sha256": "e7bbf083765c806ddfc45db41b7b90afe955a79b5d4ed128d92f3ad479230b4f",
+      "bytes": 2522,
+      "sha256": "adc00f23a0a2eca34836f30fbd19d34bd731d64040ed382d75e9a2839f88beab",
       "purpose": "universal documentation and policies"
     },
     {
+      "path": "docs/EVOLUTION_PR_PROPOSAL.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 3359,
+      "sha256": "dbbbdab64ec9e7a12f0ee2fb1dd6c85d45862a399b1ea73472ecda70fa7ac968"
+    },
+    {
+      "path": "docs/PROJECT_ADOPTION.md",
+      "purpose": "universal voluntary project adoption guide; documentation only",
+      "bytes": 7072,
+      "sha256": "fa8aca326590b118ff7ffd83d9fc1d3385ca725f88bef0ae71300c6e9f107206"
+    },
+    {
       "path": "docs/PUBLISHING.md",
-      "bytes": 4262,
-      "sha256": "4c7f7c2f15416ff04f3c2e10d29c9682a9c71bf4f1c3d57883ff985e611630e7",
+      "bytes": 4811,
+      "sha256": "d6cbeb8911a27472f1a3fb062d4298f03426cd9e6b2fb5f6af2db3e55cdeb6bb",
       "purpose": "universal documentation and policies"
     },
     {
       "path": "docs/RELEASE_GATES.md",
-      "bytes": 2118,
-      "sha256": "9d10707facfc2da65b2d8f72a2884fd194ba8ba1180249ef4be62e83e7c942a8",
+      "bytes": 2425,
+      "sha256": "1670aab145a4692fa2bbcf8d8096449445c221ce03a868f963d9868256ba5699",
       "purpose": "universal documentation and policies"
     },
     {
       "path": "docs/adapters/REFERENCE_ADAPTERS.md",
-      "bytes": 2943,
-      "sha256": "14c0a96ab6a9ec738b7a9678f596272501283a3492d42be2bf3e26fdc2879989",
+      "bytes": 3504,
+      "sha256": "e28ac4b57feac69364d0c2230f4effef06231de62ea33e059a48e889fe02c1f1",
       "purpose": "universal documentation and policies"
     },
     {
       "path": "docs/architecture/ARCHITECTURE.md",
-      "bytes": 3077,
-      "sha256": "bb1d5612e712c436d548a6d30e0e2cc3e255ea79cbb6c13bd553d774aab6bb24",
+      "bytes": 3403,
+      "sha256": "fdba3534f397b80a2687c797297c99583dbd39848c1aeaca7e6958fbaa667b76",
       "purpose": "universal documentation and policies"
     },
     {
+      "path": "docs/experimental/PERSISTENT_RUNTIME.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 5991,
+      "sha256": "8cf123ffd471036fed7c45333a4c68038b1fc3eee6f78bc30e8ba67d542ee3aa"
+    },
+    {
+      "path": "docs/guides/DESTINATION_PROJECTION.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 3179,
+      "sha256": "eab32907065aeea4e317ad62004c417e223616e84bc8ba8e0c1b2bce44a873c4"
+    },
+    {
+      "path": "docs/guides/EFFECT_PLAN.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 3273,
+      "sha256": "342c2d109d416a47a564022927b0322d71c14e163230bccbb28aa0894a210eab"
+    },
+    {
+      "path": "docs/guides/EVIDENCE_ACCEPTANCE.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 2509,
+      "sha256": "40f59aaf883ed788fb12f929ee4486a1d331c7d7073060caac22574210dae86d"
+    },
+    {
       "path": "docs/spec/1/SPECIFICATION.md",
-      "bytes": 9283,
-      "sha256": "e509bab8cf785926a63a54df3df16bd769819a41dfd2ed18a8e36ee3685c376b",
+      "bytes": 9851,
+      "sha256": "7086b8a44bef9b0d88cd0e6398be1510c902fa70ce995902367600c53131542f",
       "purpose": "universal documentation and policies"
     },
     {
@@ -166,6 +238,78 @@
       "purpose": "synthetic fixtures only"
     },
     {
+      "path": "fixtures/evolution/README.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 1707,
+      "sha256": "0242efec6f12b2dd9cffb3f1e94ffe4d4b10c411acb5a8869476d663e5df8cee"
+    },
+    {
+      "path": "fixtures/evolution/bundle.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 2578,
+      "sha256": "e714f411115bea1de51a9558c033ff10f4e9c5cee3f1d969422385da56727bcf"
+    },
+    {
+      "path": "fixtures/evolution/contract-records.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 13690,
+      "sha256": "e68d2ca213b28d48f07755153685e995d1567306396f2a01e9472396b36db4ab"
+    },
+    {
+      "path": "fixtures/evolution/destination-projection.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 584,
+      "sha256": "cfc94307230fe29b2ecdb360d8a0a5593edd2fd063e3367123857af88c7241fb"
+    },
+    {
+      "path": "fixtures/evolution/effect-cases.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 4662,
+      "sha256": "97bc8f819713fb4187c409632e2588bc7f72d0149095a24c29c8806870527345"
+    },
+    {
+      "path": "fixtures/evolution/effect-plan.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 1577,
+      "sha256": "7158274860e0af66155e406b315765b23956181f9c84e51d59fb7cc45372f26c"
+    },
+    {
+      "path": "fixtures/evolution/evidence-acceptance.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 1637,
+      "sha256": "cd6a17eec46b8baae66fe08e942ca451d68fa675f1bbe78149d13b9b2f5d9f65"
+    },
+    {
+      "path": "fixtures/evolution/evidence-cases.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 371,
+      "sha256": "97ea74e1231724c2e45007e20d92185838def7a6c9a18945aed5e36a8a7a7b10"
+    },
+    {
+      "path": "fixtures/evolution/inventory.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 343,
+      "sha256": "047c4121e106bb9061fdb13b84e7a645386563224d70c3b220deefdd465f212c"
+    },
+    {
+      "path": "fixtures/evolution/observation-narrow.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 428,
+      "sha256": "0cecf4e4fa97c948ac036c54ea094c884a13637346c558b3870938af5f20f952"
+    },
+    {
+      "path": "fixtures/evolution/observation-wide.json",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 426,
+      "sha256": "4ad912639395cb9d7fc2177fad43223e51bc7f99c1ba6306f2ff692a68a004e6"
+    },
+    {
+      "path": "fixtures/evolution/publication-body.txt",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 47,
+      "sha256": "f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed"
+    },
+    {
       "path": "fixtures/synthetic-handoff.md",
       "bytes": 851,
       "sha256": "35029e878cffbec1b322a5bfee7183771f45f232e71ab9e1a74cb1475aad04e8",
@@ -173,20 +317,20 @@
     },
     {
       "path": "policies/AUTONOMY.md",
-      "bytes": 1353,
-      "sha256": "c2b074489e7a013493964ba63ff2bc3846d2e6aaabee8f4f5a2b2397663eb9c9",
+      "bytes": 1826,
+      "sha256": "3e080e41690b110089b87eac9054dbc96792cea38a652b2486e3c746eb88b64b",
       "purpose": "universal documentation and policies"
     },
     {
       "path": "reports/local-tests.json",
-      "bytes": 916,
-      "sha256": "df9f2d977fa0f7d1b289de51416c8d015d9536142bfa4e15f81f487a2367d92e",
+      "bytes": 1071,
+      "sha256": "1983d360ca88c6f1796ae9790660882e2503c75c94468730f409a6d7d3c283cb",
       "purpose": "sanitized local source-candidate evidence"
     },
     {
       "path": "reports/privacy-audit.json",
-      "bytes": 1487,
-      "sha256": "f896a56aa690b76a399f960101a7cc2e1e74fcdc14368ca3ac315735c1f0d7ed",
+      "bytes": 1553,
+      "sha256": "aa0acb2d9030c369de3dd8c926e9908c2218ec6fb5db931e64838bae2d8032ba",
       "purpose": "sanitized local source-candidate evidence"
     },
     {
@@ -527,20 +671,26 @@
     },
     {
       "path": "templates/project/COORDINATOR.md",
-      "bytes": 1210,
-      "sha256": "2ce96e170cfc4142f4a398f9cf127c002ce751d2a5b666d69ee23dfb057a2dde",
+      "bytes": 2741,
+      "sha256": "0e7f7a89e60c97bcfb055f58fde4d4e2b49a656638a3caefdd2f13aeb45216ab",
       "purpose": "inactive project adoption templates"
     },
     {
       "path": "templates/project/README.md",
-      "bytes": 924,
-      "sha256": "38ac4a3dc200d9cd88a98033a247c64ef6b7743aadf49f3e1a577f3a7ebd062d",
+      "bytes": 1281,
+      "sha256": "3118823819934b972d4a7716272458b6e0971ca23eecea2d39c1c9407e157e18",
       "purpose": "inactive project adoption templates"
     },
     {
+      "path": "templates/project/RESUME.md",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 2772,
+      "sha256": "451e5749541660fa42c309d179869284b670f1c78d90d45f7a9a8d7d8600b467"
+    },
+    {
       "path": "templates/project/SUBAGENT.md",
-      "bytes": 839,
-      "sha256": "2bf120604a6e3dc1e556a50fab7a06d6f468e03e939d3d717ac337f04ae34cca",
+      "bytes": 1854,
+      "sha256": "5b6aec7bfde0d804ae1b4622a5e4ecfef484b578dde6fe1042241b2386213735",
       "purpose": "inactive project adoption templates"
     },
     {
@@ -554,6 +704,12 @@
       "bytes": 4773,
       "sha256": "a093b116d335a4d1ca54b7e1e9ae5f7baf48eb5edad5cb56cda97d60d4ebb6cb",
       "purpose": "local synthetic validation cases"
+    },
+    {
+      "path": "tests/test_evolution_profiles.py",
+      "purpose": "optional evolution proposal, fictional fixtures or local acceptance checks",
+      "bytes": 15233,
+      "sha256": "dd801e3198edf13c715c24d37e2ab41896ce6a23eb9ec8df6256070a43773f55"
     },
     {
       "path": "tests/test_example_handoff.py",
@@ -587,9 +743,10 @@
     },
     {
       "path": "tools/check.py",
-      "bytes": 2824,
-      "sha256": "864835851b9511c1834959055d599918af53c40c4bbe0dbca3882d8848d936a7",
+      "bytes": 3106,
+      "sha256": "3320abc8929757485a4af144558fc2b5c88207c09c9bf159dd674314e88beff9",
       "purpose": "offline validation and export auditing"
     }
-  ]
+  ],
+  "proposal_status": "UNRELEASED_CONTRIBUTION_VERSION_ASSIGNMENT_PENDING"
 }

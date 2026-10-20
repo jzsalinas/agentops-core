@@ -28,3 +28,13 @@ Drain/reconcile work before changing versions. Rollback must preserve monotonic
 consumption, fencing and publication history; restoring an old ledger can duplicate
 effects or reuse grants. If safe reversal is unknown, stop and obtain a reviewed
 recovery plan. Administrative and production operations need separate authorization.
+
+The [first evolution compatibility report](../AGENTOPS_COMPATIBILITY_REPORT.md) proposes
+a future source MINOR while retaining native AGENTOPS/1. It does not assign a public
+version. Experimental artifact identifiers are distinct from native schema versions;
+pin and explicitly adopt them before interpreting their contents. This unreleased
+branch must not be represented as the immutable original source candidate.
+
+The [project adoption guide](PROJECT_ADOPTION.md) describes detection, pin comparison,
+compatibility review, a consumer update PR, local tests, owner approval and recorded
+activation. It is documentary; no consumer, integration or permission changes here.

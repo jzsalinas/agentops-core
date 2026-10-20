@@ -1,0 +1,368 @@
+{
+  "Task": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "Task",
+    "id": "urn:agentops:example-project:task:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_revision": 1,
+    "objective": "Publish one fictional report to one fictional destination",
+    "requested_by": {
+      "agent_id": "urn:agentops:example-project:agent:2",
+      "team_id": "urn:agentops:example-project:team:2",
+      "owner_id": "urn:agentops:example-project:human:2"
+    },
+    "target": {
+      "agent_id": "urn:agentops:example-project:agent:1",
+      "team_id": "urn:agentops:example-project:team:1",
+      "owner_id": "urn:agentops:example-project:human:1"
+    },
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "action": "publish_result",
+    "acceptance_criteria": [
+      "Review the exact fictional report and the layout-wide and height-correct assertions on the pinned revision"
+    ],
+    "idempotency_key": "sha256:2854bf5d2e0d275a5db4ea9a899fe5774a7948ba2e43ce6a2fbd547f65de4b58",
+    "correlation_id": "urn:agentops:example-project:task:1",
+    "trigger_event_id": "urn:agentops:example-project:event:1",
+    "deadline_at": "2025-01-01T12:20:00Z",
+    "budget": {
+      "max_attempts": 2,
+      "wall_seconds": 600,
+      "max_tokens": 0,
+      "max_cost_minor": 0,
+      "currency": "USD",
+      "max_external_effects": 1,
+      "max_hops": 4,
+      "max_no_progress_exchanges": 2
+    },
+    "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "states": {
+      "receipt": "RECORDED",
+      "execution": "QUEUED",
+      "review": "PENDING",
+      "authorization": "GRANTED",
+      "publication": "NOT_REQUESTED",
+      "closure": "OPEN"
+    },
+    "review_target": {
+      "agent_id": "urn:agentops:example-project:agent:2",
+      "team_id": "urn:agentops:example-project:team:2",
+      "owner_id": "urn:agentops:example-project:human:2"
+    }
+  },
+  "Execution": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "Execution",
+    "id": "urn:agentops:example-project:execution:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "assignment_id": "urn:agentops:example-project:assignment:1",
+    "parent_execution_id": null,
+    "executor_id": "urn:agentops:example-project:executor:1",
+    "authorization_id": "urn:agentops:example-project:authorization:1",
+    "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "status": "CLAIMED",
+    "attempt_ids": [],
+    "budget": {
+      "max_attempts": 2,
+      "wall_seconds": 600,
+      "max_tokens": 0,
+      "max_cost_minor": 0,
+      "currency": "USD",
+      "max_external_effects": 1,
+      "max_hops": 4,
+      "max_no_progress_exchanges": 2
+    },
+    "cancel_requested": false
+  },
+  "TaskAssignment": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "TaskAssignment",
+    "id": "urn:agentops:example-project:assignment:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "agent_id": "urn:agentops:example-project:agent:1",
+    "executor_id": "urn:agentops:example-project:executor:1",
+    "execution_id": "urn:agentops:example-project:execution:1",
+    "lease_token": "synthetic-lease-1",
+    "fencing_token": 1,
+    "lease_expires_at": "2025-01-01T12:20:00Z",
+    "exclusive_resource_ids": [
+      "urn:agentops:example-project:resource:1"
+    ],
+    "authorization_id": "urn:agentops:example-project:authorization:1"
+  },
+  "Authorization": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "Authorization",
+    "id": "urn:agentops:example-project:authorization:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "approval_request_id": null,
+    "issuer_principal": {
+      "issuer": "https://example.invalid/trusted-registry",
+      "subject": "synthetic-owner-1"
+    },
+    "grantee_agent_id": "urn:agentops:example-project:agent:1",
+    "decision_source": "LOCAL_POLICY",
+    "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "scope": {
+      "task_id": "urn:agentops:example-project:task:1",
+      "task_revision": 1,
+      "resource": {
+        "resource_id": "urn:agentops:example-project:resource:1",
+        "repository_ref": "https://example.invalid/repo/demo",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "revision_status": "PINNED",
+        "paths": [
+          "README.md"
+        ]
+      },
+      "actions": [
+        "publish_result"
+      ],
+      "artifact_digests": [
+        "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+        "sha256:7158274860e0af66155e406b315765b23956181f9c84e51d59fb7cc45372f26c"
+      ],
+      "max_effects": 1
+    },
+    "valid_from": "2025-01-01T12:00:00Z",
+    "expires_at": "2025-01-01T12:20:00Z",
+    "max_uses": 2,
+    "used_count": 0,
+    "status": "GRANTED",
+    "decision_evidence_ref": "urn:synthetic:policy:1"
+  },
+  "ApprovalRequest": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "ApprovalRequest",
+    "id": "urn:agentops:example-project:approval:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "requester_agent_id": "urn:agentops:example-project:agent:1",
+    "approver_owner_ids": [
+      "urn:agentops:example-project:human:2"
+    ],
+    "scope": {
+      "task_id": "urn:agentops:example-project:task:1",
+      "task_revision": 1,
+      "resource": {
+        "resource_id": "urn:agentops:example-project:resource:1",
+        "repository_ref": "https://example.invalid/repo/demo",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "revision_status": "PINNED",
+        "paths": [
+          "README.md"
+        ]
+      },
+      "actions": [
+        "publish_result"
+      ],
+      "artifact_digests": [
+        "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+        "sha256:7158274860e0af66155e406b315765b23956181f9c84e51d59fb7cc45372f26c"
+      ],
+      "max_effects": 1
+    },
+    "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "prepared_bundle": {
+      "bundle_id": "urn:agentops:example-project:evidence:1",
+      "digest": "sha256:e714f411115bea1de51a9558c033ff10f4e9c5cee3f1d969422385da56727bcf"
+    },
+    "reason": "Request exact fictional report effect; example remains pending",
+    "expires_at": "2025-01-01T12:20:00Z",
+    "status": "PENDING",
+    "decision_ref": null
+  },
+  "EvidenceBundle": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "EvidenceBundle",
+    "id": "urn:agentops:example-project:evidence:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "execution_id": "urn:agentops:example-project:execution:1",
+    "attempt_id": "urn:agentops:example-project:attempt:1",
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "evidence_class": "AUTOMATED_LOCAL",
+    "observed_at": "2025-01-01T12:00:00Z",
+    "environment_summary": "Pure Python fixture; offline; synthetic",
+    "procedure": [
+      "Inspect fixture text without executing source"
+    ],
+    "result": "PASS",
+    "artifacts": [
+      {
+        "artifact_id": "urn:agentops:example-project:artifact:publication-body-txt",
+        "uri": "https://example.invalid/artifacts/publication-body.txt",
+        "digest": "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+        "bytes": 47,
+        "media_type": "text/plain"
+      },
+      {
+        "artifact_id": "urn:agentops:example-project:artifact:effect-plan-json",
+        "uri": "https://example.invalid/artifacts/effect-plan.json",
+        "digest": "sha256:7158274860e0af66155e406b315765b23956181f9c84e51d59fb7cc45372f26c",
+        "bytes": 1577,
+        "media_type": "application/json"
+      },
+      {
+        "artifact_id": "urn:agentops:example-project:artifact:evidence-acceptance-json",
+        "uri": "https://example.invalid/artifacts/evidence-acceptance.json",
+        "digest": "sha256:cd6a17eec46b8baae66fe08e942ca451d68fa675f1bbe78149d13b9b2f5d9f65",
+        "bytes": 1637,
+        "media_type": "application/json"
+      },
+      {
+        "artifact_id": "urn:agentops:example-project:artifact:destination-projection-json",
+        "uri": "https://example.invalid/artifacts/destination-projection.json",
+        "digest": "sha256:cfc94307230fe29b2ecdb360d8a0a5593edd2fd063e3367123857af88c7241fb",
+        "bytes": 584,
+        "media_type": "application/json"
+      }
+    ],
+    "claims_supported": [
+      "Fictional artifacts are prepared with exact byte references"
+    ],
+    "claims_not_supported": [
+      "No authority issuance, actual instrumentation, remote effect or privacy guarantee established"
+    ],
+    "limitations": [
+      "Synthetic local examples only"
+    ],
+    "supersedes_ids": [],
+    "redactions": []
+  },
+  "HandoffMessage": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "HandoffMessage",
+    "id": "urn:agentops:example-project:message:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "event_id": "urn:agentops:example-project:event:1",
+    "correlation_id": "urn:agentops:example-project:task:1",
+    "causation_id": null,
+    "type": "REVIEW_REQUIRED",
+    "source": {
+      "agent_id": "urn:agentops:example-project:agent:2",
+      "team_id": "urn:agentops:example-project:team:2",
+      "owner_id": "urn:agentops:example-project:human:2"
+    },
+    "target": {
+      "agent_id": "urn:agentops:example-project:agent:1",
+      "team_id": "urn:agentops:example-project:team:1",
+      "owner_id": "urn:agentops:example-project:human:1"
+    },
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "summary": "Review fictional effect plan and criterion coverage",
+    "requested_action": "Review only; reload authority before any effect",
+    "resolution_condition": "Verify exact bundle digest and current task/resource/policy; UNKNOWN requires reconciliation",
+    "evidence_refs": [
+      {
+        "bundle_id": "urn:agentops:example-project:evidence:1",
+        "digest": "sha256:e714f411115bea1de51a9558c033ff10f4e9c5cee3f1d969422385da56727bcf"
+      }
+    ],
+    "legacy": null
+  },
+  "Incident": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "Incident",
+    "id": "urn:agentops:example-project:incident:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "task_id": "urn:agentops:example-project:task:1",
+    "execution_id": "urn:agentops:example-project:execution:1",
+    "attempt_id": "urn:agentops:example-project:attempt:1",
+    "category": "PRIVACY",
+    "severity": "MEDIUM",
+    "effect_state": "NONE",
+    "summary": "Synthetic pre-emission projector rejected a disallowed value; cause known from fixture",
+    "evidence_refs": [
+      {
+        "bundle_id": "urn:agentops:example-project:evidence:1",
+        "digest": "sha256:e714f411115bea1de51a9558c033ff10f4e9c5cee3f1d969422385da56727bcf"
+      }
+    ],
+    "recovery_action_ids": [
+      "urn:agentops:example-project:recovery:1"
+    ],
+    "status": "RECONCILING"
+  },
+  "RecoveryAction": {
+    "schema_version": "AGENTOPS/1",
+    "kind": "RecoveryAction",
+    "id": "urn:agentops:example-project:recovery:1",
+    "record_revision": 1,
+    "project_id": "urn:agentops:example-project:project:1",
+    "created_at": "2025-01-01T12:00:00Z",
+    "incident_id": "urn:agentops:example-project:incident:1",
+    "action": "RECONCILE",
+    "preconditions": [
+      "Correct destination projection under adopted policy",
+      "Keep rejected values out of public diagnostics"
+    ],
+    "authorization_id": null,
+    "max_attempts": 1,
+    "status": "PROPOSED",
+    "evidence_refs": [
+      {
+        "bundle_id": "urn:agentops:example-project:evidence:1",
+        "digest": "sha256:e714f411115bea1de51a9558c033ff10f4e9c5cee3f1d969422385da56727bcf"
+      }
+    ],
+    "forbidden_effects": [
+      "No private inventory export or claim of reversing earlier disclosure"
+    ]
+  }
+}
