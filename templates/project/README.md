@@ -13,3 +13,8 @@ Use the coordinator, subagent and autonomy instructions as reviewed templates, n
 as live prompts loaded from a mutable public branch. Configuration evolution and
 new triggers require their own schema, tests and migration review. Keep credentials
 in an approved external store; contracts contain references, not values.
+
+The optional evolution additions in coordinator/subagent instructions and [RESUME](RESUME.md)
+are local contribution candidates. Manual documentary use can organize references and
+review without claiming durable or operational conformance. Owners must explicitly adopt
+their exact version/digest; no ProjectConfig change or runtime activation is included.

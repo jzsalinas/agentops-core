@@ -1,0 +1,48 @@
+{
+  "profile": "agentops-evidence-acceptance/0.1-experimental",
+  "task_id": "urn:agentops:example-project:task:1",
+  "task_revision": 1,
+  "assertions": [
+    {
+      "claim_id": "layout-wide",
+      "subject_id": "urn:agentops:example-project:resource:1",
+      "subject_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "condition": {
+        "field": "layout",
+        "equals": "wide"
+      },
+      "artifact_key": "observation-wide.json",
+      "artifact_digest": "sha256:4ad912639395cb9d7fc2177fad43223e51bc7f99c1ba6306f2ff692a68a004e6",
+      "required_class": "INSTRUMENTED",
+      "producer": "synthetic-probe",
+      "procedure": "synthetic-layout-probe/1",
+      "recorded_observation": "wide",
+      "recorded_result": "PASS",
+      "limits": [
+        "Does not establish remote effect or real instrumentation"
+      ]
+    },
+    {
+      "claim_id": "height-correct",
+      "subject_id": "urn:agentops:example-project:resource:1",
+      "subject_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "condition": {
+        "field": "height",
+        "equals": 800
+      },
+      "artifact_key": "observation-wide.json",
+      "artifact_digest": "sha256:4ad912639395cb9d7fc2177fad43223e51bc7f99c1ba6306f2ff692a68a004e6",
+      "required_class": "INSTRUMENTED",
+      "producer": "synthetic-probe",
+      "procedure": "synthetic-layout-probe/1",
+      "recorded_observation": 800,
+      "recorded_result": "PASS",
+      "limits": [
+        "Does not establish remote effect or real instrumentation"
+      ]
+    }
+  ],
+  "limitations": [
+    "Simulated provenance; requires actual independent review"
+  ]
+}

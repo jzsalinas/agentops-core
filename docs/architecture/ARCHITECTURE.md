@@ -57,3 +57,8 @@ make that tradeoff explicit in the consumer's policy. The lighthouse hosts no pr
 Teams may share administration while using separate roles/jobs. That demonstrates
 logical coordination, not independent administrative trust boundaries. Required
 human acceptance remains separate from an automated technical assessment.
+
+The [persistent runtime experiment](../experimental/PERSISTENT_RUNTIME.md) refines
+the implementation path and its fault oracles. It explicitly requires exclusion
+across overlapping resources, including different tasks, and action settlement within
+one operator. This specification is not evidence of an implemented runtime.

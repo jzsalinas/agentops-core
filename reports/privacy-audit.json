@@ -1,25 +1,26 @@
 {
   "status": "PASS_SUBJECT_TO_RELEASE_GATES",
-  "scope": "Exact public file payload, hidden entries and structured strings; maintainer-controlled private denylist applied separately. Git metadata is reviewed separately before publication.",
+  "files_checked": 125,
+  "private_policy_applied": true,
+  "scope": "Exact 125-file contribution candidate including allowed hidden entries and decoded structured strings; original public auditor unchanged.",
   "findings": [],
-  "copyright_notice": "Maintainer-approved notice appears only in LICENSE.",
-  "governance": "Independent project, administered by the maintainer; contributions do not grant approval or administrative authority.",
-  "external_dependencies": "Declared, unbundled; distribution license metadata reviewed; no copied third-party code or media.",
   "private_evidence_included": false,
   "active_workflows_included": false,
   "credentials_included": false,
-  "limitations": [
-    "Pattern matching and manual review are bounded, not proof against every possible identifying encoding.",
-    "Dependency review covers declared Python distributions, not every upstream native component.",
-    "Public destination, final content and commit metadata still require explicit maintainer approval."
-  ],
+  "license_and_third_party_notices_unchanged": true,
   "method": [
-    "Explicit file allowlist and checksums",
-    "UTF-8 text, JSON value and Python literal inspection",
-    "Unicode normalization and private-pattern review",
-    "Host paths, credentials, contacts and domain checks",
-    "No source history, dependencies, media or historical records packaged",
-    "Git index and commit payload must match the exact reviewed public inventory"
+    "Explicit public file allowlist and SHA-256 checksums",
+    "Clean export audited with original public auditor and external private denylist",
+    "Exact staged Git blobs compared to the clean payload and inspected by the same validator",
+    "Separate content review; private historical sources and denylist excluded",
+    "Independent security agent reviewed the initial 124-file tree and the final candidate including the universal adoption guide; findings and exact-tree evidence retained separately"
   ],
-  "inherited_history_included": false
+  "independent_security_review": "EXACT_TREE_AGENT_REVIEW_EVIDENCE_RETAINED_SEPARATELY",
+  "maintainer_acceptance": "PENDING",
+  "publication": "WITHHELD_PENDING_EXACT_COMMIT_AUTHORIZATION",
+  "limitations": [
+    "Pattern matching and content review are bounded, not proof against every identifying relationship or encoding.",
+    "Synthetic projector output capture does not cover real tool or infrastructure channels.",
+    "Agent task separation is not independent human or institutional certification; final public push requires maintainer authorization for the exact commit."
+  ]
 }

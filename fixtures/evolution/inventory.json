@@ -1,0 +1,16 @@
+[
+  {
+    "resource_id": "resource-allowed",
+    "state": "READY",
+    "title": "synthetic-sensitive-canary",
+    "nested": {
+      "value": "synthetic-sensitive-canary"
+    }
+  },
+  {
+    "resource_id": "resource-other",
+    "state": "PENDING",
+    "title": "synthetic-foreign-canary",
+    "credential": "NONFUNCTIONAL_SYNTHETIC_VALUE"
+  }
+]

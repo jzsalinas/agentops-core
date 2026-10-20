@@ -142,3 +142,13 @@ reference. Semantic guards cover selected relationships, not all operational
 requirements. See conformance and release gates for the limits of tested claims.
 Any change to accepted messages, policy decisions, instructions, or runtime behavior
 requires compatibility analysis and explicit consumer adoption.
+
+## Optional evolution artifacts under review
+
+The proposed [effect plan](../../guides/EFFECT_PLAN.md),
+[criterion acceptance](../../guides/EVIDENCE_ACCEPTANCE.md) and
+[destination projection](../../guides/DESTINATION_PROJECTION.md) guides compose the
+existing contracts through digest-bearing artifacts. They do not extend native schemas,
+grant authority or establish operational conformance. The
+[compatibility report](../../../AGENTOPS_COMPATIBILITY_REPORT.md) specifies separate
+profile adoption and future version boundaries. Native validation remains unchanged.

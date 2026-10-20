@@ -1,0 +1,27 @@
+{
+  "profile": "agentops-destination-projection/0.1-experimental",
+  "selector": "resource-allowed",
+  "destinations": {
+    "MODEL_CONTEXT": [
+      "resource_id",
+      "state"
+    ],
+    "PUBLIC_SUMMARY": [
+      "state"
+    ]
+  },
+  "value_policy": {
+    "resource_id": [
+      "resource-allowed",
+      "resource-other"
+    ],
+    "state": [
+      "READY",
+      "PENDING"
+    ]
+  },
+  "failure_output": "Fixed category only; no raw values or partial payload",
+  "limitations": [
+    "Policy supplied by trusted test harness; real tool and infrastructure logs not covered"
+  ]
+}

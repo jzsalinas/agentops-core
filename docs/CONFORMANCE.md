@@ -28,3 +28,16 @@ automated tests, platform observations and documents are different evidence clas
 The reference timestamp/URI checks intentionally enforce a conservative subset.
 No general RFC format, security audit, provider compatibility, vulnerability-free
 status, or multi-platform certification is implied by passing the current suite.
+
+## Local evolution proposal evidence
+
+Selected pure experiments for effect decisions, criterion coverage and destination
+projection are IMPLEMENTED and locally TESTED in `tests/test_evolution_profiles.py`.
+The [test report](../AGENTOPS_TEST_RESULTS.md) records exact scope/counts. These are
+candidate optional artifacts, not new native contracts or operational certification.
+Grant authentication/atomic accounting, real dialogue classification, honest observation
+provenance and real pre-emission channels remain unverified. Resume tests reuse trusted
+in-memory records and serialized snapshots, not durable restart recovery.
+
+The [persistent runtime fault matrix](experimental/PERSISTENT_RUNTIME.md) is PROPOSED;
+none of its multiprocess/durable crash cases is executed by these local profile tests.

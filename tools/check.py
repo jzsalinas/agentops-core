@@ -25,6 +25,8 @@ def check():
     run()
     links = 0
     for path in ROOT.rglob('*.md'):
+        if '.git' in path.relative_to(ROOT).parts:
+            continue  # Repository metadata is not part of the public source payload.
         for target in re.findall(r'\]\(([^)]+)\)', path.read_text()):
             if ':' in target or target.startswith('#'):
                 continue
@@ -34,13 +36,13 @@ def check():
             links += 1
     index = json.loads((ROOT/'schemas/1/examples/index.json').read_text())
     packages = ['jsonschema','referencing','PyYAML','attrs','jsonschema-specifications','rpds-py']
-    return {'status':'PASS','scope':'Local schemas, selected guards, pure synthetic reference functions, format/privacy checks and in-memory SQL constraints only',
+    return {'status':'PASS','scope':'Local schemas, selected guards, pure synthetic reference functions and optional profile experiments, format/privacy checks and in-memory SQL constraints only',
       'tests_run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped),
       'schema_files':len(list((ROOT/'schemas/1').glob('*.schema.json'))),'positive_examples':sum(x['valid'] for x in index),'negative_examples':sum(not x['valid'] for x in index),
       'internal_links_checked':links,'python_version':'.'.join(map(str,sys.version_info[:3])),
       'dependencies':{n:importlib.metadata.version(n) for n in packages},
       'remote_requests':0,'model_invocations':0,'external_effects':0,'workflows_created':0,
-      'not_verified':['Operational authority issuer','Real provider execution','Remote delivery or publication','Durable worker or multiprocess crash recovery','Production operations','External protocol compatibility']}
+      'not_verified':['Operational authority issuer','Real provider execution','Remote delivery or publication','Durable worker or multiprocess crash recovery','Production operations','External protocol compatibility','Real dialogue classification or destination projection channels','Complete semantic acceptance across domains']}
 
 
 if __name__ == '__main__':

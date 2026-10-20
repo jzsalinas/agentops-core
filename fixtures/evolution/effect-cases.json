@@ -1,0 +1,195 @@
+{
+  "base_facts": {
+    "task_id": "urn:agentops:example-project:task:1",
+    "task_revision": 1,
+    "resource": {
+      "resource_id": "urn:agentops:example-project:resource:1",
+      "repository_ref": "https://example.invalid/repo/demo",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "revision_status": "PINNED",
+      "paths": [
+        "README.md"
+      ]
+    },
+    "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "target_ref": "https://example.invalid/reports/one",
+    "body_digest": "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+    "prior_effect": "NONE",
+    "settled": true,
+    "dialogue": "ROUTINE"
+  },
+  "base_constraints": {
+    "grant_checked": true,
+    "tool_allows": true,
+    "actions": [
+      "publish_result"
+    ],
+    "artifact_digests": [
+      "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed"
+    ],
+    "remaining_effects": 1,
+    "human_dialogue_policy": "ALLOW_SAME_EFFECT"
+  },
+  "cases": [
+    {
+      "name": "routine-covered",
+      "facts": {},
+      "constraints": {},
+      "expected": "READY_FOR_ONE_ACTION"
+    },
+    {
+      "name": "consult-every-dialogue",
+      "facts": {},
+      "constraints": {
+        "human_dialogue_policy": "CONSULT_EVERY_DIALOGUE"
+      },
+      "expected": "DECISION_REQUIRED"
+    },
+    {
+      "name": "new-scope",
+      "facts": {
+        "dialogue": "NEW_SCOPE"
+      },
+      "constraints": {},
+      "expected": "DECISION_REQUIRED"
+    },
+    {
+      "name": "unclassified-dialogue",
+      "facts": {
+        "dialogue": "UNCLASSIFIED"
+      },
+      "constraints": {},
+      "expected": "DECISION_REQUIRED"
+    },
+    {
+      "name": "pending-async-update",
+      "facts": {
+        "settled": false
+      },
+      "constraints": {},
+      "expected": "WAIT_FOR_COMPLETION"
+    },
+    {
+      "name": "timeout-after-effect",
+      "facts": {
+        "prior_effect": "UNKNOWN"
+      },
+      "constraints": {},
+      "expected": "RECONCILE_ONLY"
+    },
+    {
+      "name": "pending-send",
+      "facts": {
+        "prior_effect": "SENDING"
+      },
+      "constraints": {},
+      "expected": "RECONCILE_ONLY"
+    },
+    {
+      "name": "confirmed-no-resend",
+      "facts": {
+        "prior_effect": "CONFIRMED"
+      },
+      "constraints": {},
+      "expected": "NO_ACTION"
+    },
+    {
+      "name": "unknown-state",
+      "facts": {
+        "prior_effect": "UNRECOGNIZED"
+      },
+      "constraints": {},
+      "expected": "STOP_UNKNOWN_STATE"
+    },
+    {
+      "name": "tool-denial",
+      "facts": {},
+      "constraints": {
+        "tool_allows": false
+      },
+      "expected": "STOP_AUTHORITY"
+    },
+    {
+      "name": "missing-grant",
+      "facts": {},
+      "constraints": {
+        "grant_checked": false
+      },
+      "expected": "STOP_AUTHORITY"
+    },
+    {
+      "name": "no-effects-left",
+      "facts": {},
+      "constraints": {
+        "remaining_effects": 0
+      },
+      "expected": "STOP_AUTHORITY"
+    },
+    {
+      "name": "wrong-output-grant",
+      "facts": {},
+      "constraints": {
+        "artifact_digests": []
+      },
+      "expected": "STOP_AUTHORITY"
+    },
+    {
+      "name": "wrong-action-grant",
+      "facts": {},
+      "constraints": {
+        "actions": [
+          "analyze_read_only"
+        ]
+      },
+      "expected": "STOP_AUTHORITY"
+    },
+    {
+      "name": "changed-body",
+      "facts": {
+        "body_digest": "sha256:96a8051e362730e408799a64483f6933c704a857655d6f3912e70844e75e6bcf"
+      },
+      "constraints": {},
+      "expected": "STOP_DRIFT"
+    },
+    {
+      "name": "changed-destination",
+      "facts": {
+        "target_ref": "https://example.invalid/reports/two"
+      },
+      "constraints": {},
+      "expected": "STOP_DRIFT"
+    },
+    {
+      "name": "changed-task-revision",
+      "facts": {
+        "task_revision": 2
+      },
+      "constraints": {},
+      "expected": "STOP_DRIFT"
+    },
+    {
+      "name": "changed-policy",
+      "facts": {
+        "policy_digest": "sha256:47e9edaf7bfcaa0428a17db5f5a77d77eb908e47c351f01d0dafa1b9113c4cee"
+      },
+      "constraints": {},
+      "expected": "STOP_DRIFT"
+    },
+    {
+      "name": "changed-resource",
+      "facts": {
+        "resource": {
+          "resource_id": "urn:agentops:example-project:resource:1",
+          "repository_ref": "https://example.invalid/repo/demo",
+          "revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "revision_status": "PINNED",
+          "paths": [
+            "README.md"
+          ]
+        }
+      },
+      "constraints": {},
+      "expected": "STOP_DRIFT"
+    }
+  ]
+}

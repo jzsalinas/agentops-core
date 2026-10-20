@@ -1,0 +1,16 @@
+{
+  "simulation": true,
+  "subject_id": "urn:agentops:example-project:resource:1",
+  "subject_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "source_class": "INSTRUMENTED",
+  "producer": "synthetic-probe",
+  "procedure": "synthetic-layout-probe/1",
+  "conditions": {
+    "layout": "narrow",
+    "height": 800
+  },
+  "process_result": "PASS",
+  "limitations": [
+    "Simulated probe; no physical device observed"
+  ]
+}

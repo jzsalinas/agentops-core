@@ -1,0 +1,41 @@
+{
+  "profile": "agentops-effect-plan/0.1-experimental",
+  "objective": "Publish one fictional report to one fictional destination",
+  "task_id": "urn:agentops:example-project:task:1",
+  "task_revision": 1,
+  "resource": {
+    "resource_id": "urn:agentops:example-project:resource:1",
+    "repository_ref": "https://example.invalid/repo/demo",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "revision_status": "PINNED",
+    "paths": [
+      "README.md"
+    ]
+  },
+  "policy_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "authorization_id": "urn:agentops:example-project:authorization:1",
+  "steps": [
+    {
+      "step_id": "publish-one",
+      "action": "publish_result",
+      "target_ref": "https://example.invalid/reports/one",
+      "marker": "synthetic-report-one",
+      "body_digest": "sha256:f61ff63a025b0dae14e41bb39552f25d9afe796fd3763a296b1eb07b924515ed",
+      "before_state": "No confirmed effect under the original marker",
+      "preconditions": [
+        "Reload current trusted grant, target, revision and exact bytes",
+        "No unresolved previous effect"
+      ],
+      "completion_signal": "Exact marker, target and body digest readback",
+      "postcondition": "One matching effect confirmed",
+      "on_timeout": "RECONCILE_ONLY",
+      "allowed_recovery": "Authorized readback only; no blind send"
+    }
+  ],
+  "forbidden_effects": [
+    "New destinations, agreements, permissions or deployments"
+  ],
+  "limitations": [
+    "Fictional artifact; does not authenticate or consume a grant"
+  ]
+}

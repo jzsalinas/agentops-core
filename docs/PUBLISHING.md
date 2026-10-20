@@ -1,4 +1,15 @@
-# Preparing and publishing the initial commit
+# Preparing publication
+
+## Subsequent contributions
+
+For the local evolution proposal, `main` is populated and its verified tip is
+`f58a5399ccfe75271402f7bc5a55625ecda21baf`. Prepare work on a local branch, retain public
+history, run tests and audit the exact candidate payload. The
+[local PR proposal](EVOLUTION_PR_PROPOSAL.md) is not a remote contribution. Maintainer
+approval must identify exact bytes, any future commit metadata, destination and action
+before publication. Do not run the initial empty-repository procedure against this state.
+
+## Initial-publication procedure (historical)
 
 The official public GitHub repository has already been created. The initial target
 branch is `main`; read-only inspection confirmed an empty remote during preparation.
