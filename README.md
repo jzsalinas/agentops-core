@@ -23,6 +23,10 @@ service, or live agent session is installed by using this repository.
 
 ## Explore
 
+New to AgentOps? Start with [a read-only project assessment](GETTING_STARTED.md).
+Assistants can use [the agent entry point](FOR_AI_AGENTS.md); the portable onboarding
+skill is an optional source artifact, not an installed integration.
+
 | Document | Purpose |
 | --- | --- |
 | [Specification](docs/spec/1/SPECIFICATION.md) | Contracts, identity, state dimensions, evidence, authority, and reliability |

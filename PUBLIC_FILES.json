@@ -1,8 +1,8 @@
 {
   "format": "agentops-public-file-manifest/1",
-  "candidate": "0.1.0-draft.1",
+  "candidate": "unpublished-onboarding-proposal",
   "wire_draft": "AGENTOPS/1",
-  "scope": "Exact reviewed public allowlist. Additional files fail validation.",
+  "scope": "Exact reviewed local public candidate allowlist. No release or version change is implied; additional files fail validation.",
   "metadata_files": [
     "MANIFEST.sha256",
     "PUBLIC_FILES.json"
@@ -20,6 +20,30 @@
       "bytes": 79,
       "sha256": "a47a00e82535076ace8df43c8d01a804a746461deca450a1fb950cdfeecdedd9",
       "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "AGENTOPS_ONBOARDING_ARCHITECTURE.md",
+      "bytes": 5014,
+      "sha256": "308acb96fdc6a6595004cdb00d2c94ecde2a1226959f2c30b1b3e4a3ade57217",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "AGENTOPS_ONBOARDING_COMPATIBILITY.md",
+      "bytes": 3962,
+      "sha256": "c7c186fb4c6f60a9f1fdd29dec3ba82417238dfe1f536993028c073b5c0f622b",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "AGENTOPS_ONBOARDING_TEST_RESULTS.md",
+      "bytes": 5743,
+      "sha256": "fead768566e140d710978808a84e80dc9b9b114a96f47e8679f7b81391025e13",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "AGENTOPS_ONBOARDING_USER_JOURNEY.md",
+      "bytes": 2373,
+      "sha256": "c3aedee667fb3de9ce5903e086f3cd6dc729bf57f6a74acbd7c99fcbfcea76b8",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
     },
     {
       "path": "CHANGELOG.md",
@@ -40,6 +64,18 @@
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
+      "path": "FOR_AI_AGENTS.md",
+      "bytes": 2056,
+      "sha256": "3ecd529074cabdd508f7f90ff417ebe7b168b1e68bfd263eeb554b9b79888f96",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "GETTING_STARTED.md",
+      "bytes": 2969,
+      "sha256": "98cf8a9c25f9427ffa53b0e69e14dafd3865fa74ef12fcd836f6afde952863c3",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
       "path": "GOVERNANCE.md",
       "bytes": 1828,
       "sha256": "ce6c2933152fb29693b4582dfea7670139814a09d456951ef05573df6ad1bbfd",
@@ -53,14 +89,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 4056,
-      "sha256": "190eb87a1c9a774df9a4fc590ebd3176d74fe22b4ff9f5b8f0a97a9f298da54e",
+      "bytes": 4293,
+      "sha256": "31353907228cdfb37998e46a6570b2ebb6c36ec4d90b6258b022ff5b5635280c",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 1375,
-      "sha256": "80b3bcc2aed22ecced876678f3a15dadfbd2963c589b846934fe0a6fc299ba0f",
+      "bytes": 1693,
+      "sha256": "bf1eae9a7edc92fa9ddc368b4019455be516584ce898d3457692a9e6a5bf9e93",
       "purpose": "reviewed root documentation or repository configuration"
     },
     {
@@ -74,6 +110,36 @@
       "bytes": 1703,
       "sha256": "fbd6600a4ff4fe5600a9077ae6117927979f767f95cc44b3c9c1d4203c436626",
       "purpose": "reviewed root documentation or repository configuration"
+    },
+    {
+      "path": "agentops-onboarding/SKILL.md",
+      "bytes": 4497,
+      "sha256": "1d67365a96fb1fb44fd41f6e3c30841611ad5b3d9efe340297c0d02652e2a913",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "agentops-onboarding/assets/ADOPTION_CHECKLIST.md",
+      "bytes": 2106,
+      "sha256": "64155f8eefcec6ce1343e11aeeb46c4d73231c2419c34f5093f66c6a6c15e582",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "agentops-onboarding/assets/AGENTS_SNIPPET.md",
+      "bytes": 1610,
+      "sha256": "a8cad2369d33554cbb625683893c0a83382d0e71197bda70c39a6ca992ec9b96",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "agentops-onboarding/references/DIAGNOSIS.md",
+      "bytes": 2470,
+      "sha256": "84cc7b0da2b582a312478ec3dcce3086605d0fbda8224dd4070e5e8c4269a7c0",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "agentops-onboarding/references/PROPOSAL.md",
+      "bytes": 2368,
+      "sha256": "5f23c03e5b32de7774b3d985f635c7fa26778d346d6b7c63dbffd90bdfa90bbd",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
     },
     {
       "path": "agentops_reference/__init__.py",
@@ -124,6 +190,12 @@
       "purpose": "universal documentation and policies"
     },
     {
+      "path": "docs/ONBOARDING_CONTRIBUTION_PROPOSAL.md",
+      "bytes": 1534,
+      "sha256": "43c7df19841daf7494d7ba3fa375089267e92ff956983e0911d3b9a788972811",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
       "path": "docs/PUBLISHING.md",
       "bytes": 4262,
       "sha256": "4c7f7c2f15416ff04f3c2e10d29c9682a9c71bf4f1c3d57883ff985e611630e7",
@@ -166,6 +238,72 @@
       "purpose": "synthetic fixtures only"
     },
     {
+      "path": "fixtures/onboarding/README.md",
+      "bytes": 1010,
+      "sha256": "712e99900b1a5b6d9da7f202c051315a0803a68a9c5fad525bc883d887d93ceb",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/declined.json",
+      "bytes": 961,
+      "sha256": "dbe69ccf8ba166a2bee659edc737a094ee430a8672556d7785c03bac4cf201e9",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/existing-agents.json",
+      "bytes": 1410,
+      "sha256": "993e3c2c61e149982af4b3202ada320a3ba843dfc6afaecd3067bd86115b090a",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/incompatible-policy.json",
+      "bytes": 1230,
+      "sha256": "b633467a1bd21a37e61b26b9409abf1cb8eda479505fe8d70b7d307c9e609daa",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/multi-team.json",
+      "bytes": 1662,
+      "sha256": "b84e4355617a0e24a2e98beedcbdee68057936b984a0494163fbe1f19bd701c7",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/no-instructions.json",
+      "bytes": 1862,
+      "sha256": "31a01cd30047e3732aded49bb641fd46e39bf4c955c0888f6231a25b0c34b1f4",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/offline.json",
+      "bytes": 677,
+      "sha256": "0922102da23efb931475bb3d35626983ecc98c12d57f7df8a18d1b9fcff9c1e3",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/prerelease-only.json",
+      "bytes": 1105,
+      "sha256": "1238762ea27a7d95baead6d52149f83238d0b4e5d188147928efd33ab0145c8a",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/self-asserted-digest.json",
+      "bytes": 885,
+      "sha256": "869772b7ee79b88940480d97335f6bcb04fe2bf361a73bb28b1c8c99ee97333e",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/solo-small.json",
+      "bytes": 1082,
+      "sha256": "44c00732fec8e273250cbcb6e8dff0308bfde8e35a6f497ef3aa2c241520b5e2",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "fixtures/onboarding/unpublished-and-injection.json",
+      "bytes": 844,
+      "sha256": "6d042f94466aa28d751c9618be314ad4d772ce7c5d02463a32cdf93fd25b45d3",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
       "path": "fixtures/synthetic-handoff.md",
       "bytes": 851,
       "sha256": "35029e878cffbec1b322a5bfee7183771f45f232e71ab9e1a74cb1475aad04e8",
@@ -179,14 +317,26 @@
     },
     {
       "path": "reports/local-tests.json",
-      "bytes": 916,
-      "sha256": "df9f2d977fa0f7d1b289de51416c8d015d9536142bfa4e15f81f487a2367d92e",
+      "bytes": 1141,
+      "sha256": "b21a58c001225b53512271a6f08f7290e9efad92a7dcc06d208cd2595750154d",
       "purpose": "sanitized local source-candidate evidence"
     },
     {
+      "path": "reports/onboarding-evaluation.json",
+      "bytes": 24272,
+      "sha256": "65efa0a3421e7a343a8301ca154613e8f99c4f34138cdbb26d5c002c650f8282",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
+      "path": "reports/onboarding-security-review.md",
+      "bytes": 1980,
+      "sha256": "8182c1fde605313b7dd2ec9be428f5d56e53855b2f862d1a9d342e399b71049d",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
       "path": "reports/privacy-audit.json",
-      "bytes": 1487,
-      "sha256": "f896a56aa690b76a399f960101a7cc2e1e74fcdc14368ca3ac315735c1f0d7ed",
+      "bytes": 1836,
+      "sha256": "ea35016c3b633199044bccbea9c791accf6e94559735497d15aeb48ebfaf141a",
       "purpose": "sanitized local source-candidate evidence"
     },
     {
@@ -574,21 +724,27 @@
       "purpose": "local synthetic validation cases"
     },
     {
+      "path": "tests/test_onboarding.py",
+      "bytes": 6071,
+      "sha256": "6736ff4210e7c1de11de77d040099dfe3d1774d5e6652f0dd962107a1094a999",
+      "purpose": "optional onboarding kit, synthetic evaluation or bounded package test"
+    },
+    {
       "path": "tests/test_public_audit.py",
-      "bytes": 3263,
-      "sha256": "dacc9b6202f458d9824a856f9c88bd4648a3619650162132ebcf54ef617e83ad",
+      "bytes": 3796,
+      "sha256": "10ac904223336b08dbd8ff0b7df54aa6ee9b11ec553ee88d3aae28c67730c1ff",
       "purpose": "local synthetic validation cases"
     },
     {
       "path": "tools/audit_public.py",
-      "bytes": 10442,
-      "sha256": "8b416619e61ad559fd255013e516c01e07f08f958f59ce689ed737dbde716f49",
+      "bytes": 10590,
+      "sha256": "75ec82da31b8e28ea0061727fc9311754f38817347efa287672b1377a6345a07",
       "purpose": "offline validation and export auditing"
     },
     {
       "path": "tools/check.py",
-      "bytes": 2824,
-      "sha256": "864835851b9511c1834959055d599918af53c40c4bbe0dbca3882d8848d936a7",
+      "bytes": 3029,
+      "sha256": "6ea638910c5c58989f4ffb4297459dba83937fdfe31de61b15e2ed3baefd9632",
       "purpose": "offline validation and export auditing"
     }
   ]

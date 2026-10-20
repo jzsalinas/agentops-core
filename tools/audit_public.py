@@ -12,7 +12,11 @@ import unicodedata
 from urllib.parse import urlsplit
 from zipfile import ZipFile
 
-OFFICIAL_HOSTS = {'json-schema.org', 'pypi.org', 'spdx.org', 'opensource.org', 'docs.github.com'}
+OFFICIAL_HOSTS = {
+    'json-schema.org', 'pypi.org', 'spdx.org', 'opensource.org', 'docs.github.com',
+    # Exact primary documentation hosts used by the optional onboarding guide.
+    'learn.chatgpt.com', 'agentskills.io', 'code.claude.com',
+}
 METADATA_FILES = {'PUBLIC_FILES.json', 'MANIFEST.sha256'}
 HIDDEN_ALLOWED = {'.gitignore', '.gitattributes'}
 

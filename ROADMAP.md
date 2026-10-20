@@ -1,5 +1,10 @@
 # Roadmap
 
+Optional entry path: the [onboarding kit](AGENTOPS_ONBOARDING_ARCHITECTURE.md) is a
+local documentation proposal for read-only project assessment and approved
+documentary adoption. It neither completes nor depends on the runtime stages below.
+Host discovery and consumer installation remain untested and unperformed.
+
 1. Review the draft contracts, privacy boundaries, license, examples, and offline
    validators. Publish source only after explicit maintainer approval.
 2. Implement a real single-writer local CLI with SQLite persistence, atomic claims,

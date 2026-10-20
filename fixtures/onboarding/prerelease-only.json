@@ -1,0 +1,23 @@
+{
+  "format": "agentops-onboarding-scenario/1",
+  "id": "prerelease-only",
+  "synthetic": true,
+  "request": "Assess this project. Our configured channel has only the supplied published prerelease. I have not accepted prerelease adoption.",
+  "context": {
+    "network": "offline",
+    "source": {
+      "channel": "https://releases.example.org/agentops",
+      "status": "published-prerelease",
+      "version": "2.0.0-rc.1",
+      "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "trust": "Scenario stipulates an authenticated release and artifact verified using the owner-preapproved offline trust anchor. Hypothetical evidence only, not a real release."
+    },
+    "teams": 1
+  },
+  "files": {
+    "README.md": "# Sample service\nGo source, local unit tests, no access to operations in this assessment.\n",
+    "go.mod": "module sample.invalid/service\n\ngo 1.22\n",
+    "POLICY.md": "Owner approval is required for any adoption, including explicit acceptance of prerelease risks.\n"
+  }
+}

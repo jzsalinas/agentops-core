@@ -1,14 +1,14 @@
 {
   "status": "PASS",
-  "scope": "Local schemas, selected guards, pure synthetic reference functions, format/privacy checks and in-memory SQL constraints only",
-  "tests_run": 49,
+  "scope": "Local schemas, selected guards, pure synthetic reference functions, format/privacy checks, in-memory SQL constraints and onboarding package/corpus checks only",
+  "tests_run": 58,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
   "schema_files": 16,
   "positive_examples": 16,
   "negative_examples": 20,
-  "internal_links_checked": 21,
+  "internal_links_checked": 48,
   "python_version": "3.14.4",
   "dependencies": {
     "jsonschema": "4.19.2",
@@ -28,6 +28,10 @@
     "Remote delivery or publication",
     "Durable worker or multiprocess crash recovery",
     "Production operations",
-    "External protocol compatibility"
+    "External protocol compatibility",
+    "Host skill installation or discovery",
+    "Live model evaluation (reported separately)",
+    "Consumer adoption or activation",
+    "Cryptographic release verification for onboarding"
   ]
 }

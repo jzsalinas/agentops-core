@@ -1,0 +1,19 @@
+{
+  "format": "agentops-onboarding-scenario/1",
+  "id": "offline",
+  "synthetic": true,
+  "request": "Assess AgentOps with no Internet. No cached release or trust evidence is available. Continue my ordinary work afterward.",
+  "context": {
+    "network": "prohibited",
+    "source": {
+      "status": "unknown",
+      "cache": "none"
+    },
+    "teams": 1
+  },
+  "files": {
+    "README.md": "# Offline sample\nA C library. Build is documented but must not be executed for this assessment.\n",
+    "Makefile": "# Build details omitted from assessment scope.\n",
+    "POLICY.md": "No network. No instructions may be installed without verified source and owner approval.\n"
+  }
+}

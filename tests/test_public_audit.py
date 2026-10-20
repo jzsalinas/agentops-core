@@ -8,6 +8,14 @@ from zipfile import ZipFile, ZipInfo
 from tools.audit_public import findings_for_text, inspect_files, audit_directory, audit_archive
 
 class PublicAuditTest(unittest.TestCase):
+    def test_onboarding_documentation_hosts_are_exact(self):
+        for host in ('learn.chatgpt.com', 'agentskills.io', 'code.claude.com'):
+            with self.subTest(host=host):
+                self.assertEqual(findings_for_text('guide.md', 'https://' + host + '/docs'), [])
+                for changed in ('untrusted.' + host, host + '.invalid-host'):
+                    findings = findings_for_text('guide.md', 'https://' + changed + '/docs')
+                    self.assertEqual(findings[0]['category'], 'unapproved-host')
+
     def test_host_path_and_secret_detection(self):
         path = '/' + 'ho' + 'me' + '/' + 'example-user/file'
         token = 'gh' + 'p_' + 'A' * 24

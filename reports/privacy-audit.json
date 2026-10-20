@@ -1,6 +1,6 @@
 {
   "status": "PASS_SUBJECT_TO_RELEASE_GATES",
-  "scope": "Exact public file payload, hidden entries and structured strings; maintainer-controlled private denylist applied separately. Git metadata is reviewed separately before publication.",
+  "scope": "Exact 125-file local onboarding public candidate, including hidden allowlisted files, structured strings, complete inventory and all checksums. External private policy applied. Git metadata and raw reviews stay outside the export.",
   "findings": [],
   "copyright_notice": "Maintainer-approved notice appears only in LICENSE.",
   "governance": "Independent project, administered by the maintainer; contributions do not grant approval or administrative authority.",
@@ -11,7 +11,9 @@
   "limitations": [
     "Pattern matching and manual review are bounded, not proof against every possible identifying encoding.",
     "Dependency review covers declared Python distributions, not every upstream native component.",
-    "Public destination, final content and commit metadata still require explicit maintainer approval."
+    "Public destination, final content and commit metadata still require explicit maintainer approval.",
+    "No installed host compatibility, real release authentication or universal assistant compliance is certified.",
+    "The official-documentation host allowlist is text audit policy only; it grants no authority or trust."
   ],
   "method": [
     "Explicit file allowlist and checksums",
@@ -21,5 +23,7 @@
     "No source history, dependencies, media or historical records packaged",
     "Git index and commit payload must match the exact reviewed public inventory"
   ],
-  "inherited_history_included": false
+  "inherited_history_included": false,
+  "files_checked": 125,
+  "candidate": "unpublished-onboarding-proposal"
 }
